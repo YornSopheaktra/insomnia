@@ -1,0 +1,23 @@
+_id: req_6bff1f9e6e8d42b8970d32a5e7de181c
+type: Request
+parentId: fld_d90d623381494890a4039bcff151349e
+modified: 1700216521334
+created: 1700216521334
+url: http://localhost:9090/bakong-service/api/v1/bakong/bank-list
+name: GetBakongBankList
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698677685021.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

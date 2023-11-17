@@ -1,0 +1,49 @@
+_id: req_9b552ced60814b78b56190be76b41a83
+type: Request
+parentId: fld_6c338348418a4fda821b58ff2945610e
+modified: 1700216551183
+created: 1700216551183
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/telco_operators/create"
+name: CreateNewTelcoWithConfigOneTV
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"operator_name": "ONETV",
+    	"is_pinless": false,
+    	"is_pincode": true,
+    	"sequence": 6,
+    	"config": {
+    		"pinless_settle_account": null,
+    		"pincode_settle_account": "000001915075",
+    		"prefix_number": "",
+    		"select_plan": "1,6,10",
+    		"select_plan_pin_code": "1,6,10",
+    		"input_option":"SELECT"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_770b2589e54e455b9dee15c3bdb02a81
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+    id: pair_cad47844321a413c83956408ce60dc0a
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+    id: pair_1a3d19b429f04aad896b8e409a058ed8
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+    id: pair_63e977fbfd11471992f83c4bd8ea7c42
+authentication: {}
+metaSortKey: -1646859799680.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

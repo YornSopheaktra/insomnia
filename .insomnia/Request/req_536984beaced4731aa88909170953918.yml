@@ -1,0 +1,39 @@
+_id: req_536984beaced4731aa88909170953918
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570147
+created: 1700216570147
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services/fee"
+name: GetFee
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "service_module": "TRANSFER",
+        "channel": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+    id: pair_9c26f119342e4aaba0494c5a70b208ca
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+    id: pair_01ee805d68934b7fb69e62618482d8da
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+    id: pair_8b654f34508a4b98bdfecc9956d43a04
+  - name: Content-Type
+    value: application/json
+    id: pair_f3a6af656a584226901d3811ba928528
+authentication: {}
+metaSortKey: -1643677934250
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

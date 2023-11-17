@@ -1,0 +1,31 @@
+_id: req_3223b7db5b82469b8e55afae5d316dd8
+type: Request
+parentId: fld_233ffe39f2b94fb98a0af3a704123a86
+modified: 1700216551061
+created: 1700216551061
+url: http://localhost:9092/service-configuration/api/v1.0/translator/data/upsert
+name: Upsert
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"key":"account",
+    	"value":"Account1",
+    	"value1": "លេខគណនី"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_93e3b23262264bd381d808cf08714af8
+authentication: {}
+metaSortKey: -1643311233458
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

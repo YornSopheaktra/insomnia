@@ -1,0 +1,164 @@
+_id: req_2221305acc3246109b648cc9fee06799
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570186
+created: 1700216570186
+url: http://10.215.117.196:8080/payment-service/api/1.0/services
+name: CreateServiceIBBulkPaymentPayroll
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"service_module": "PAYMENT",
+    	"service_group": {
+    		"code": "PAYMENT",
+    		"name": "Payroll Payent",
+    		"description": "Payroll Payentr"
+    	},
+    	"services": [
+    		{
+    			"service_id": "bulk_payroll",
+    			"txn_currency": [
+    				"USD",
+    				"KHR",
+    				"THB"
+    			],
+    			"name": "Bulk Payment Payroll",
+    			"name_kh": "Bulk Payment Payroll",
+    			"description": "",
+    			"service_bean": "defaultPaymentService",
+    			"is_create_transaction": true,
+    			"is_has_fee": false,
+    			"product_code": "MBTF",
+    			"transaction_code": "PAYROLL",
+    			"is_enabled_pre_order": false,
+    			"is_repeatable": true,
+    			"service_command": [
+    				"PAYMENT"
+    			],
+    			"txn_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"min": 0.01,
+    					"max": 500000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"min": 100,
+    					"max": 4000000000
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"min": 1,
+    					"max": 16000000
+    				}
+    			],
+    			"daily_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"limit": 500000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"limit": 4000000000
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"limit": 16000000
+    				}
+    			],
+    			"service_tier": [
+    				{
+    					"txn_currency": "USD",
+    					"from": 0.01,
+    					"to": 500000.0,
+    					"rate": 0,
+    					"fee": 0.3,
+    					"type": "FIXED",
+    					"min": 0,
+    					"max": 0,
+    					"operation": "DR"
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"from": 100,
+    					"to": 4000000000,
+    					"rate": 0,
+    					"fee": 1200,
+    					"type": "FIXED",
+    					"min": 0,
+    					"max": 0,
+    					"operation": "DR"
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"from": 1,
+    					"to": 16000000.0,
+    					"rate": 0,
+    					"fee": 10,
+    					"type": "FIXED",
+    					"min": 0,
+    					"max": 0,
+    					"operation": "DR"
+    				}
+    			],
+    			"service_notification": [
+    				{
+    					"txn_currency": "USD",
+    					"service_bean": "",
+    					"notification_template": "Payroll is transfer successful, And ${ccy} ${amount} is credited to your account ${accountNumber} on ${date} at ${time}"
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"service_bean": "",
+    					"notification_template": "Payroll is transfer successful, And ${ccy} ${amount} is credited to your account ${accountNumber} on ${date} at ${time}"
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"service_bean": "",
+    					"notification_template": "Payroll is transfer successful, And ${ccy} ${amount} is credited to your account ${accountNumber} on ${date} at ${time}"
+    				}
+    			],
+    			"service_additional_configs": [
+    				{
+    					"txn_currency": "USD",
+    					"NARRATIVE": "Bulk payment payroll"
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"NARRATIVE": "Bulk payment payroll"
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"NARRATIVE": "Bulk payment payroll"
+    				}
+    			],
+    			"status": null
+    		}
+    	],
+    	"channel": "IB",
+    	"channel_type": "IB"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1643243595774.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,92 @@
+_id: req_26eb89ae66d4403ca6bc2fff8eb2a4e5
+type: Request
+parentId: fld_22b2bf2af2be418485e455a0c8f18097
+modified: 1700216551131
+created: 1700216551131
+url: http://10.215.117.196:8080/service-configuration/api/v1.0/service_fields/batch/save
+name: AddBatchServiceMapperCashBack
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"fields_mappers": [
+    		{
+    			"service_id": "campaign_cashback",
+    			"field_key": "from",
+    			"field_value": "Cash Back Payment",
+    			"field_label": "Cash Back Payment",
+    			"field_label_kh": "បានទទួលទឹកប្រាក់ត្រលប់",
+    			"sequence": 1,
+    			"txn_type": "CREDIT",
+    			"field_type": "title"
+    		},
+    		{
+    			"service_id": "campaign_cashback",
+    			"field_key": "to_account",
+    			"field_value": "$.order_details.payee_user.account_type$ $.order_details.payee_user.account_number$ | $.order_details.payee_user.account_ccy$",
+    			"field_label": "To Account",
+    			"field_label_kh": "គណនីទទួល",
+    			"sequence": 3,
+    			"txn_type": "CREDIT",
+    			"field_type": "sub_title"
+    		},
+    		{
+    			"service_id": "campaign_cashback",
+    			"field_key": "trx_id",
+    			"field_value": "$.ext_transaction_id$",
+    			"field_label": "Trx ID",
+    			"field_label_kh": "លេខប្រតិបត្តការ",
+    			"sequence": 2,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"service_id": "campaign_cashback",
+    			"field_key": "trx_date",
+    			"field_value": "$.transaction_date$",
+    			"field_label": "Trx Date",
+    			"field_label_kh": "កាលបរិច្ឆេទ",
+    			"sequence": 4,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"service_id": "campaign_cashback",
+    			"field_key": "ref_no",
+    			"field_value": "$.ext_transaction_id ",
+    			"field_label": "Ref No",
+    			"field_label_kh": "លេខយោង",
+    			"sequence": 7,
+    			"txn_type": "CREDIT",
+    			"field_type": "static_field"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_6e3ce740690946a9bc16c96c1e457d27
+  - id: pair_44d7c9e2bff9454d94871f2c9ca510a0
+    name: x-api-key
+    value: "{{ _.web_api_key }}"
+    description: ""
+  - id: pair_730e0993c4c4447aafe669fe9df9609a
+    name: client_secret
+    value: "{{ _.web_client_secret }}"
+    description: ""
+  - id: pair_26280b476e9f4e36baff9360dba4c6d6
+    name: client_id
+    value: "{{ _.web_client_id }}"
+    description: ""
+authentication: {}
+metaSortKey: -1643932865923
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

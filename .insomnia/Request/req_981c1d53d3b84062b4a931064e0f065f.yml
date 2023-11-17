@@ -1,0 +1,42 @@
+_id: req_981c1d53d3b84062b4a931064e0f065f
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551047
+created: 1700216551047
+url: "{{ _.baseUrl }}/service-configuration/admin-rest/sys_message"
+name: addSysMessageActivation
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-2
+     {
+    		"status": "ACTIVE",
+    		"code": "UP-ARP002",
+    		"message": "Your account or phone number is incorrect, You might check and try again.",
+    		"message_kh": "លេខគណនីឬ លេខទូរស័ព្ទរបស់លោកអ្នកមិនត្រឹមត្រូវទេ, សូមពិនិត្យ​មើលពត៏មាន ហើយព្យាយាមម្តងទៀត។",
+    		"title": "Account info is incorrect",
+    		"title_kh": "ព័ត៌មានគណនីមិនត្រឹមត្រូវ",
+    		"app_name": "global",
+    		"prefix": "",
+    		"version": null
+    	}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636133681180.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

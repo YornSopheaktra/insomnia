@@ -1,0 +1,42 @@
+_id: req_ef63fe530d4c4070a261a166aef854d0
+type: Request
+parentId: fld_6c338348418a4fda821b58ff2945610e
+modified: 1700216551147
+created: 1700216551147
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/telco_operators/create"
+name: CreateNewTelcoWithConfigMetfone
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"operator_name": "METFONE",
+    	"config": {
+    		"pinless_settle_account": "154402469018",
+    		"pincode_settle_account": "000001915075",
+    		"prefix_number": "088,097,071,031,060,066,067,068,090",
+    		"select_plan": "1,2,5,10,20,50",
+    		"select_plan_pin_code": "1,2,5,10,20,50",
+    		"input_option":"SELECT"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+authentication: {}
+metaSortKey: -1646920289207.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

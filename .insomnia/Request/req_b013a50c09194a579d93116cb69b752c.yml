@@ -1,0 +1,30 @@
+_id: req_b013a50c09194a579d93116cb69b752c
+type: Request
+parentId: fld_4708ec755e4243559ea1f32bd25d6fbd
+modified: 1700216551298
+created: 1700216551298
+url: "{{ _.baseUrl
+  }}/service-configuration/api/v1.0/mobile/services/p_internet/settings"
+name: getServiceConfig
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669005783380
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,33 @@
+_id: req_763bf1b78f59420d959a9bde7b524525
+type: Request
+parentId: fld_3cbcc535c99f4ef29ecdb39c04601c3f
+modified: 1700216550996
+created: 1700216550996
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/questions/id/1"
+name: getSecuiryQuestionsById
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_79c86ccbd1b94cf69e2eead75543940a
+    name: x-api-key
+    value: "{{ _.web_api_key }}"
+    description: ""
+  - id: pair_a5a974914c804a8984d7633782e05ba1
+    name: client_id
+    value: "{{ _.web_client_id }}"
+    description: ""
+  - id: pair_9ec0aa41e144493a95e0a2d82a97db99
+    name: client_secret
+    value: "{{ _.web_client_secret }}"
+    description: ""
+authentication: {}
+metaSortKey: -1636348983523
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,100 @@
+_id: req_df6d5e049f3244519229ccda2705156e
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570170
+created: 1700216570170
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceKSCB
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"service_module": "TRANSFER",
+    	"service_group": {
+    		"code": "KSCB",
+    		"name": "KS Transfer",
+    		"description": "KS Transfer"
+    	},
+    	"services": [
+    		{
+    			"service_id": "transfer_kscb",
+    			"txn_currency": [
+    				"USD"
+    			],
+    			"name": "KS Transfer",
+    			"name_kh": "KS Transfer",
+    			"description": "KS Transfer",
+    			"service_bean": "defaultPaymentService",
+    			"is_create_transaction": false,
+    			"is_has_fee": true,
+    			"product_code": "HATB",
+    			"transaction_code": "KSCB",
+    			"is_enabled_pre_order": true,
+    			"is_repeatable": true,
+    			"service_command": [
+    				"PAYMENT"
+    			],
+    			"service_spi": {
+    				"spi_code": "outbound",
+    				"action_code": "kscbPaymentService",
+    				"step": [
+    					"POST_EXECUTE",
+    					"PRE_CREATE"
+    				]
+    			},
+    			"txn_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"min": 0.01,
+    					"max": 99999999999
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"min":100,
+    					"max": 999999999999
+    				}
+    			],
+    			"daily_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"limit": 99999999999
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"limit": 99999999999
+    				}
+    			],
+    			"service_tier": [
+    			],
+    			"service_notification": [],
+    			"service_additional_configs": [
+    			],
+    			"status": null
+    		}
+    	],
+    	"channel": "CUSTOMER_MOBILE",
+    	"channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1643001028376.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

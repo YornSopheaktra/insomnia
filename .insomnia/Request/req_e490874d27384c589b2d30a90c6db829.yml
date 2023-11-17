@@ -1,0 +1,90 @@
+_id: req_e490874d27384c589b2d30a90c6db829
+type: Request
+parentId: fld_27f51941eb8f4467b8e588bf6a8b4042
+modified: 1700216551289
+created: 1700216551289
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/service_fields/batch/save"
+name: AddBatchServiceMapperHysaFee
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"fields_mappers": [
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "hysa_fee",
+    			"field_key": "hysa-fee",
+    			"field_value": "HYSA Fee Charge",
+    			"field_label": "សេវាគណនី HYSA",
+    			"field_label_kh": "សេវាគណនី HYSA",
+    			"sequence": 1,
+    			"txn_type": "DEBIT",
+    			"field_type": "title"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "hysa_fee",
+    			"field_key": "from_account",
+    			"field_value": "$.order_details.payer_user.account_type$ $.order_details.payer_user.account_number$ | $.order_details.payer_user.account_ccy$",
+    			"field_label": "From Account",
+    			"field_label_kh": "ពីគណនី",
+    			"sequence": 2,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "hysa_fee",
+    			"field_key": "trx_id",
+    			"field_value": "$.ext_transaction_id$",
+    			"field_label": "Trx ID",
+    			"field_label_kh": "លេខប្រត្តិប័ត្តការ",
+    			"sequence": 4,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "hysa_fee",
+    			"field_key": "ref_no",
+    			"field_value": "$.core_ref_no$",
+    			"field_label": "Ref No",
+    			"field_label_kh": "លេខយោង",
+    			"sequence": 6,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "hysa_fee",
+    			"field_key": "trx_date",
+    			"field_value": "$.transaction_date$",
+    			"field_label": "Trx Date",
+    			"field_label_kh": "កាលបរិច្ឆេទ",
+    			"sequence": 7,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1643818143991.6797
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

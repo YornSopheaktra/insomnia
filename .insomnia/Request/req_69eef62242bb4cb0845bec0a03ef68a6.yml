@@ -1,0 +1,42 @@
+_id: req_69eef62242bb4cb0845bec0a03ef68a6
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551037
+created: 1700216551037
+url: "{{ _.baseUrl }}/service-configuration//sys_message"
+name: addSysMessageSQ-REE01
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"status": "ACTIVE",
+    	"code": "SQ-REE01",
+    	"message": "Your have requested to reset the security Question & Answer, now it is ready for reset.",
+    	"message_kh": "លោកអ្នកបានស្នើសុំដើម្បីបង្កើត សំណួរ/ចម្លើយ សុវត្ថិភាពឡើងវិញ។ ឥឡូវនេះលោកអ្នកអាចបង្កើតឡើងវិញបានហើយ។",
+    	"title": "Security Question/Answer",
+    	"title_kh": "សំណួរ/ចម្លើយ សុវត្ថិភាព",
+    	"app_name": "global",
+    	"prefix": "",
+    	"version": "1"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636133681168.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

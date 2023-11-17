@@ -1,0 +1,113 @@
+_id: req_f24848b082d346ef81ef464c4e260871
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570221
+created: 1700216570221
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServicewithinTransferKHQRCustomer
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "service_module": "TRANSFER",
+        "service_group": {
+            "code": "WITHIN",
+            "name": "Within Transfer",
+            "description": "Within Transfer"
+        },
+        "services": [
+            {
+                "service_id": "t_htb_qr_customer",
+                "txn_currency": [
+                    "USD",
+                    "KHR",
+                    "THB"
+                ],
+                "name": "KHQR Customer Within Transfer",
+                "name_kh": "KHQR Customer Winthin Transfer",
+                "description": "",
+                "service_bean": "defaultPaymentService",
+                "is_create_transaction": true,
+                "is_has_fee": false,
+                "product_code": "MT01",
+                "transaction_code": "MBT",
+                "is_enabled_pre_order": false,
+                "is_repeatable": true,
+                "service_command": [
+                    "PAYMENT"
+                ],
+                "txn_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "min": 0.01,
+                        "max": 50000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "min": 100,
+                        "max": 200000000
+                    },
+    								{
+    									"txn_currency": "THB",
+    									"min": 1,
+    									"max": 16000000
+    								}
+                ],
+                "daily_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "limit": 50000                
+    								},
+                    {
+                        "txn_currency": "KHR",
+                        "limit": 200000000
+                    },
+                    {
+                        "txn_currency": "THB",
+                        "limit": 16000000
+                    }
+                ],
+                "service_notification":[],
+                "service_additional_configs": [
+                    {
+                        "txn_currency": "USD",
+                        "NARRATIVE": "KHQR Customer Within Transfer"
+                    },
+                    {
+                        "txn_currency": "KHR",
+                         "NARRATIVE": "KHQR Customer Within Transfer"
+                    },
+                    {
+                        "txn_currency": "THB",
+                        "NARRATIVE": "KHQR Customer Within Transfer"
+                    }
+                ],
+                "status": null
+            }
+        ],
+        "channel": "CUSTOMER_MOBILE",
+        "channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1642693648680
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,44 @@
+_id: req_b79ba830493444ce802f45483acff774
+type: Request
+parentId: fld_3cbcc535c99f4ef29ecdb39c04601c3f
+modified: 1700216550993
+created: 1700216550993
+url: "{{ _.baseUrl }}/service-configuration/questions"
+name: addQuestion
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"question": "What was your driving instructor's first name?",
+    	"question_kh": "តើគ្រូបើកបររបស់អ្នកមានឈ្មោះអ្វី?",
+    	"type": "SECURITY_QUESTION",
+    	"answer_type": "USER_INPUT"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_e67571fdd28a45d2ad8019789c7af5ff
+  - id: pair_3f9184a291e644a4b0eaa2ce0eee3f69
+    name: x-api-key
+    value: "{{ _.web_api_key }}"
+    description: ""
+  - id: pair_f1c9ae5ebc8a45cdb97f90e2204c28a3
+    name: client_id
+    value: "{{ _.web_client_id }}"
+    description: ""
+  - id: pair_a646415471034c0fbb5049af0cbff7fc
+    name: client_secret
+    value: "{{ _.web_client_id }}"
+    description: ""
+authentication: {}
+metaSortKey: -1636348983498
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

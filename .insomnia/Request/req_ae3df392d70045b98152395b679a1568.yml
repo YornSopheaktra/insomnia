@@ -1,0 +1,36 @@
+_id: req_ae3df392d70045b98152395b679a1568
+type: Request
+parentId: fld_7f0bd2e05eca400bb8a1e46c8395e898
+modified: 1700216570096
+created: 1700216570096
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services/modules"
+name: Create ServiceModule
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    { 
+      "code": "TOPUP", 
+      "name": "Top Up", 
+      "description": "Top Up" 
+    }
+parameters: []
+headers:
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1700116214098
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

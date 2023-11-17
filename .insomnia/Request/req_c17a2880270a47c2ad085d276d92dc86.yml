@@ -1,0 +1,66 @@
+_id: req_c17a2880270a47c2ad085d276d92dc86
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570120
+created: 1700216570120
+url: "{{ _.baseUrl }}/payment-service/payments/api/1.0/orders/create"
+name: CreateOrder
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"channel": "CUSTOMER_MOBILE",
+    	"amount": 10000.0,
+    	"purpose": null,
+    	"currency": "KHR",
+    	"cif": "154644929",
+    	"account_number": "168999999994",
+    	"ext_transaction_id": null,
+    	"req_ref_id": null,
+    	"branch_code": null,
+    	"channel_type": null,
+    	"bank_code": null,
+    	"remarks": "Pay fpr goods",
+    	"service_name": null,
+    	"service_id": "transfer_fast",
+    	"payer_user": {
+    		"name": null,
+    		"user_id": "154644929",
+    		"account_number": "168999999994"
+    	},
+    	"product": null,
+    	"equivalent_amount": null,
+    	"exchange_rate": null,
+    	"fee": null,
+    	"fav_name": null,
+    	"additional_ref": {
+    		"receiver_name": "YUPIN",
+    		"internal_ref": "QR22121900792759",
+    		"receiver_account": "010553102726421"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: channel
+    value: CUSTOMER_MOBILE
+  - name: cif
+    value: "154644929"
+authentication: {}
+metaSortKey: -1632709286489
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

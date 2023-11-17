@@ -1,0 +1,33 @@
+_id: req_6fd32d4bfee5423a9e7382a72a72f121
+type: Request
+parentId: fld_233ffe39f2b94fb98a0af3a704123a86
+modified: 1700216551067
+created: 1700216551067
+url: localhost:9092/service-configuration/api/v1.0/translator/data/status/ACTIVE
+name: ListTranslatorDataDictionaryLocal
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_04313b4a25574876b98178ce3bbd27c2
+    name: x-api-key
+    value: "{{ _.web_api_key }}"
+    description: ""
+  - id: pair_0d3265a0727e4cc3b893b48aeadf8460
+    name: client_secret
+    value: "{{ _.web_client_secret }}"
+    description: ""
+  - id: pair_6e6a3333f1b54ed9b487d0ae7496a835
+    name: client_id
+    value: "{{ _.web_client_id }}"
+    description: ""
+authentication: {}
+metaSortKey: -1643372655025
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

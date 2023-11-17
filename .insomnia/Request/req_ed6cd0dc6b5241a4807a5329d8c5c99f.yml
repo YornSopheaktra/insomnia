@@ -1,0 +1,72 @@
+_id: req_ed6cd0dc6b5241a4807a5329d8c5c99f
+type: Request
+parentId: fld_e90231a9e6e745518fa2dfc98fd56cc9
+modified: 1700216570111
+created: 1700216570111
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: UpdateBakongCasaSPI
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"service_module": "TRANSFER",
+    	"service_group": {
+    		"code": "BAKONG",
+    		"name": "Bakong",
+    		"description": "Bakong"
+    	},
+    	"services": [
+    		{
+    			"service_id": "transfer_bakong_casa",
+    			"txn_currency": [
+    				"USD",
+    				"KHR"
+    			],
+    			"name": "Bakong Transfer Casa",
+    			"name_kh": "Bakong Transfer Casa",
+    			"description": "Transfer to bakong casa",
+    			"service_bean": "defaultPaymentService",
+    			"is_create_transaction": true,
+    			"is_has_fee": true,
+    			"product_code": "BK05",
+    			"transaction_code": "BTB",
+    			"is_enabled_pre_order": false,
+    			"is_repeatable": true,
+    			"service_command": [
+    				"PAYMENT"
+    			],
+    			"service_spi": {
+    				"spi_code": "bakong_spi",
+    				"action_code": "bakongPaymentService",
+    				"step": [
+    					"POST_EXECUTE"
+    				]
+    			}
+    		}
+    	],
+    	"channel": "CUSTOMER_MOBILE",
+    	"channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1700117601346
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

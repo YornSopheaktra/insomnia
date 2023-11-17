@@ -1,0 +1,49 @@
+_id: req_4dc146ed8b974e7caf7fb069e3244f9c
+type: Request
+parentId: fld_6c338348418a4fda821b58ff2945610e
+modified: 1700216551186
+created: 1700216551186
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/telco_operators/create"
+name: CreateNewTelcoWithConfigOnline
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"operator_name": "ONLINE",
+    	"is_pinless": false,
+    	"is_pincode": true,
+    	"sequence": 7,
+    	"config": {
+    		"pinless_settle_account": null,
+    		"pincode_settle_account": "000001915075",
+    		"prefix_number": "",
+    		"select_plan_pin_code": "2,5,10,20,50",
+    		"select_plan": "2,5,10,20,50",
+    		"input_option":"SELECT"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_96736923cddf4a4dbb60f32f5c810ab0
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+    id: pair_8ac220b743b34fc7b4f80cee0363814f
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+    id: pair_4508e0775a37405aa9a22579715ef663
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+    id: pair_9457ea1f36c9416d817e139cc4c550bb
+authentication: {}
+metaSortKey: -1646849718092.8125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

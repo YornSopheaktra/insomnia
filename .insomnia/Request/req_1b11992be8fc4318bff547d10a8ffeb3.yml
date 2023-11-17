@@ -1,0 +1,107 @@
+_id: req_1b11992be8fc4318bff547d10a8ffeb3
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570196
+created: 1700216570196
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceTopUpPinless
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"service_module": "TOPUP",
+    	"service_group": {
+    		"code": "TOPUP",
+    		"name": "TOPUP PAYMENT",
+    		"description": "TOPUP PAYMENT"
+    	},
+    	"services": [
+    		{
+    			"service_id": "topup_pinless",
+    			"txn_currency": [
+    				"USD"
+    			],
+    			"name": "Top up pinless",
+    			"name_kh": "Top up pinless",
+    			"description": "Top up pinless",
+    			"service_bean": "defaultPaymentService",
+    			"is_create_transaction": true,
+    			"is_has_fee": false,
+    			"product_code": "MBTU",
+    			"transaction_code": "MBTU",
+    			"is_enabled_pre_order": true,
+    			"is_repeatable": true,
+    			"ext_ref_lenght": null,
+    			"service_command": [
+    				"PAYMENT"
+    			],
+    			"service_spi": {
+    				"spi_code": "outbound",
+    				"action_code": "topUpPinlessService",
+    				"step": [
+    					"PRE_CREATE",
+    					"POST_EXECUTE"
+    				]
+    			},
+    			"txn_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"max": 100.0,
+    					"min": 0.01
+    				}
+    			],
+    			"daily_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"limit": 100000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"limit": 400000000
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"limit": 100000
+    				}
+    			],
+    			"service_tier": [],
+    			"service_notification": [
+    			],
+    			"service_additional_configs": [
+    				{
+    					"IS_CHECK_PAYEE_ACC": "true",
+    					"txn_currency": "USD"
+    				}
+    			],
+    			"status": "ACTIVE",
+    			"channel": "CUSTOMER_MOBILE",
+    			"channel_type": "CUSTOMER_MOBILE"
+    		}
+    	],
+    	"status": "ACTIVE",
+    	"channel": "CUSTOMER_MOBILE",
+    	"channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1643000763370.375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

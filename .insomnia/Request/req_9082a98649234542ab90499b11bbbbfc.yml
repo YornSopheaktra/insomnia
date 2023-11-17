@@ -1,0 +1,50 @@
+_id: req_9082a98649234542ab90499b11bbbbfc
+type: Request
+parentId: fld_233ffe39f2b94fb98a0af3a704123a86
+modified: 1700216551064
+created: 1700216551064
+url: localhost:9092/service-configuration/api/v1.0/translator/data/batch/upsert
+name: BatchUpsert
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"batch_data": [
+    		{
+    			"key": "currency",
+    			"value": "Currency",
+    			"value1": "រូបិយប័ណ"
+    		},
+    		{
+    			"key": "amount",
+    			"value": "Amount",
+    			"value1": "ចំនួនទឹកប្រាក់"
+    		},
+    		{
+    			"key": "fee",
+    			"value": "Fee",
+    			"value1": "ថ្លៃសេវា"
+    		},
+    		{
+    			"key": "total_amount",
+    			"value": "Total Amount",
+    			"value1": "ចំនួនទឹកប្រាក់សរុប"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_93e3b23262264bd381d808cf08714af8
+authentication: {}
+metaSortKey: -1643249811891
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

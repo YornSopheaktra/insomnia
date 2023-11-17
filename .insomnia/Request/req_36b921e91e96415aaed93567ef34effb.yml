@@ -1,0 +1,29 @@
+_id: req_36b921e91e96415aaed93567ef34effb
+type: Request
+parentId: fld_27f51941eb8f4467b8e588bf6a8b4042
+modified: 1700216551199
+created: 1700216551199
+url: "{{ _.baseUrl
+  }}/service-configuration/api/v1.0/service_fields/service_id/p_internet/txn_ty\
+  pe/DEBIT"
+name: GetServiceMapper
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1643950566244
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

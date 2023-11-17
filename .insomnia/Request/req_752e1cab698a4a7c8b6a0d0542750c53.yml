@@ -1,0 +1,145 @@
+_id: req_752e1cab698a4a7c8b6a0d0542750c53
+type: Request
+parentId: fld_27f51941eb8f4467b8e588bf6a8b4042
+modified: 1700216551271
+created: 1700216551271
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/service_fields/batch/save"
+name: AddBatchServiceMapperKHQROtherBankCustomerIncomingOtherBank
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"fields_mappers": [
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "customer_khqr-deposit",
+    			"field_key": "from",
+    			"field_value": "Received payment from",
+    			"field_label": "Received payment from",
+    			"field_label_kh": "បានទទួលប្រាក់ពី",
+    			"sequence": 1,
+    			"txn_type": "CREDIT",
+    			"field_type": "title"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "customer_khqr-deposit",
+    			"field_key": "sender_name",
+    			"field_value": "$.order_details.additional_ref.sender_name$",
+    			"field_label": "Sender Name",
+    			"field_label_kh": "ឈ្មោះអ្នកបង់ប្រាក់",
+    			"sequence": 2,
+    			"txn_type": "CREDIT",
+    			"field_type": "sub_title"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "customer_khqr-deposit",
+    			"field_key": "trx_id",
+    			"field_value": "$.ext_transaction_id$",
+    			"field_label": "Trx ID",
+    			"field_label_kh": "លេខប្រត្តិប័ត្តការ",
+    			"sequence": 3,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "customer_khqr-deposit",
+    			"field_key": "from_account",
+    			"field_value": "$.order_details.additional_ref.sender_account$",
+    			"field_label": "From Account",
+    			"field_label_kh": "ពីគណនី",
+    			"sequence": 5,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "customer_khqr-deposit",
+    			"field_key": "sender bank",
+    			"field_value": "$.order_details.additional_ref.sender_bank$",
+    			"field_label": "Send Bank",
+    			"field_label_kh": "ពីធនាគារ",
+    			"sequence": 4,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "customer_khqr-deposit",
+    			"field_key": "to_account",
+    			"field_value": "$.order_details.payee_user.account_type$ ($.order_details.payee_user.account_number$ | $.order_details.payee_user.account_ccy$)",
+    			"field_label": "To Account",
+    			"field_label_kh": "គណនីទទួល",
+    			"sequence": 6,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "customer_khqr-deposit",
+    			"field_key": "remark",
+    			"field_value": "$.order_details.remarks$",
+    			"field_label": "Remark",
+    			"field_label_kh": "កំណត់សម្គាល់",
+    			"sequence": 99,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "customer_khqr-deposit",
+    			"field_key": "ref_no",
+    			"field_value": "$.core_ref_no$",
+    			"field_label": "Ref No",
+    			"field_label_kh": "លេខយោង",
+    			"sequence": 98,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "customer_khqr-deposit",
+    			"field_key": "trx_date",
+    			"field_value": "$.transaction_date$",
+    			"field_label": "Trx Date",
+    			"field_label_kh": "កាលបរិច្ឆេទ",
+    			"sequence": 100,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		}
+    		,{
+    			"status": "ACTIVE",
+    			"service_id": "customer_khqr-deposit",
+    			"field_key": "hash_id",
+    			"field_value": "$.order_details.additional_ref.trx_hash",
+    			"field_label": "Hash ID",
+    			"field_label_kh": "លេខកូដ Hash",
+    			"sequence": 200,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+authentication: {}
+metaSortKey: -1643819168866.5547
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

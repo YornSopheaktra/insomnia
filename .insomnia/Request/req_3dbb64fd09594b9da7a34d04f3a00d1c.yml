@@ -1,0 +1,42 @@
+_id: req_3dbb64fd09594b9da7a34d04f3a00d1c
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551043
+created: 1700216551043
+url: "{{ _.baseUrl }}/service-configuration/admin-rest/sys_message"
+name: addSysMessageSQPOLICY
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-2
+     {
+    		"status": "ACTIVE",
+    		"code": "UP-P004",
+    		"message": "The Security Answer you enter is not match the condition required, please check Security Answer policy by tap \"QUICK TIPS\" on top-right for detail then try again.",
+    		"message_kh": "ចម្លើយសុវត្ថិភាព ដែលលោកអ្នកបញ្ចូលមិនត្រូវនឹងលក្ខខណ្ឌរបស់ ធនាគាហត្ថាទេ, សូមពិនិត្យមើលគោលការណ៍ ចម្លើយសុវត្ថិភាព ដោយចុចលើពាក្យ \"ការណែនាំ\" នៅខាងលើផ្នែកខាងស្តាំដើម្បីមើលព័ត៌មាន លម្អិតរួចព្យាយាមម្តងទៀត។",
+    		"title": "Security Answer is invalid",
+    		"title_kh": "ចម្លើយសុវត្ថិភាព មិនត្រឹមត្រូវ",
+    		"app_name": "global",
+    		"prefix": "",
+    		"version": null
+    	}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636133681187
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,74 @@
+_id: req_7505903b295543d4b4c210615d3f7f71
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570215
+created: 1700216570215
+url: "{{ _.baseUrl }}/hattha-service/payments/api/1.0/orders/create"
+name: CreateOrderBTB
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"channel": "CUSTOMER_MOBILE",
+    	"amount": 1.0,
+    	"purpose": "Others",
+    	"currency": "USD",
+    	"cif": "154644929",
+    	"account_number": "168999999991",
+    	"ext_transaction_id": null,
+    	"req_ref_id": null,
+    	"branch_code": "001",
+    	"channel_type": null,
+    	"bank_code": "TRMCKHPPXXX",
+    	"remarks": "",
+    	"service_name": "payment_service_bakong_usd",
+    	"payer_user": {
+    		"name": null,
+    		"user_id": "154644929",
+    		"account_number": "168999999991",
+    		"account_ccy": null,
+    		"account_branch": null,
+    		"branch_code": "001",
+    		"account_type": null
+    	},
+    	"payee_user": null,
+    	"product": {
+    		"name": null,
+    		"ref1": "TrueMoney Cambodia",
+    		"ref2": null,
+    		"ref3": null
+    	},
+    	"equivalent_amount": null,
+    	"exchange_rate": null,
+    	"fee": null,
+    	"fav_name": "",
+    	"additional_ref": {
+    		"bank_code": "TRMCKHPPXXX",
+    		"receiver_account": "069298440",
+    		"bank_name": "TrueMoney Cambodia",
+    		"receiver_name": "dada sok"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: channel
+    value: CUSTOMER_MOBILE
+authentication: {}
+metaSortKey: -1632672301091.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

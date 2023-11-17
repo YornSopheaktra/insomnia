@@ -1,0 +1,104 @@
+_id: req_9b39bbecfdfc458fa47daa57a0c8b46c
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570227
+created: 1700216570227
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceKHQRCustomerDeposit
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"service_module": "PAYMENT",
+    	"service_group": {
+    		"code": "CUSTOMER-KHQR",
+    		"name": "CUSTOMER-KHQR",
+    		"description": "Customer KHQR Deposit"
+    	},
+    	"services": [
+    		{
+    			"service_id": "customer_khqr-deposit",
+    			"txn_currency": [
+    				"USD",
+    				"KHR"
+    			],
+    			"name": "Customer KHQR Deposit from other bank",
+    			"name_kh": "Customer KHQR Deposit from other bank",
+    			"description": "Customer KHQR Deposit from other bank",
+    			"service_bean": "defaultPaymentService",
+    			"is_create_transaction": true,
+    			"is_has_fee": false,
+    			"product_code": "BQ01",
+    			"transaction_code": "BKQ",
+    			"is_enabled_pre_order": false,
+    			"is_repeatable": false,
+    			"service_command": [
+    				"PAYMENT"
+    			],
+    			"txn_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"min": 0.01,
+    					"max": 50000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"min": 100,
+    					"max": 200000000
+    				}
+    			],
+    			"daily_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"limit": 50000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"limit": 200000000
+    				}
+    			],
+    			"service_additional_configs": [
+    				{
+    					"OFFSETBRN": "000",
+    					"OFFSETACC": "114119112",
+    					"txn_currency": "USD",
+    					"OFFSETCCY": "USD",
+    					"CFG_IS_PAYER_GL": "true",
+    					"NARRATIVE": "Customer KHQR payment from other bank"
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"OFFSETACC": "114119112",
+    					"OFFSETCCY": "KHR",
+    					"OFFSETBRN": "000",
+    					"CFG_IS_PAYER_GL": "true",
+    					"NARRATIVE": "Customer KHQR payment from other bank"
+    				}
+    			],
+    			"status": "ACTIVE"
+    		}
+    	],
+    	"channel": "CUSTOMER_MOBILE",
+    	"channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1642688412997
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

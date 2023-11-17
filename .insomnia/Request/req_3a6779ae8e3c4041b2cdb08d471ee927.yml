@@ -1,0 +1,47 @@
+_id: req_3a6779ae8e3c4041b2cdb08d471ee927
+type: Request
+parentId: fld_0d9739a15ea24f6f8792c43c094d0475
+modified: 1700216551372
+created: 1700216551372
+url: "{{ _.baseUrl }}/service-configuration/admin-rest/mobile_service_configs/18"
+name: AddTxnConfigOtherBankMerchant
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"status": "ACTIVE",
+    	"service_module": "TRANSFER",
+    	"service_id": "t_bakong_qr_merchant",
+    	"configs": {
+    		"header_title": "Hattha Pay",
+    		"header_title_kh": "Hattha Pay",
+    		"shareable": "true",
+    		"repeatable": "true",
+    		"downloadable": "true",
+    		"favorable": "false",
+    		"h_favorable":"false",
+    		"h_repeatable": "true",
+    		"filters": "{\"ios\":{\"version\":\"3.3.1\",\"operator\":\">=\"},\"android\":{\"version\":\"3.3.4\",\"operator\":\">=\"},\"whitelist_cif\":\"\"}"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+authentication: {}
+metaSortKey: -1695921899375.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,29 @@
+_id: req_e986e8f16a344f7caccc8533a5382eaa
+type: Request
+parentId: fld_3cbcc535c99f4ef29ecdb39c04601c3f
+modified: 1700216550989
+created: 1700216550989
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/questions/SECURITY_QUESTION"
+name: ListSecuiryQuestions
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: language
+    value: km
+authentication: {}
+metaSortKey: -1636348983548
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

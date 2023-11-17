@@ -1,0 +1,42 @@
+_id: req_f819bb65e92e496fa00da6a27c9b7a8f
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551023
+created: 1700216551023
+url: "{{ _.baseUrl }}/service-configuration/sys_message"
+name: addSysMessageEQ001
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"status": "ACTIVE",
+    	"code": "EQ001",
+    	"message": "Sorry, this QR code is invalid. Please try again",
+    	"message_kh": "សូមអភ័យទោស QR នេះមិនត្រឹមត្រូវទេ។ សូមព្យាយាមម្តងទៀត",
+    	"title": "Invalid QR Code",
+    	"title_kh": "QR កូដមិនត្រឹមត្រូវ",
+    	"app_name": "global",
+    	"prefix": "",
+    	"version": "1"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636133681174.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

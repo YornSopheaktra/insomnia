@@ -1,0 +1,23 @@
+_id: req_6f1b6661b42e4c31a31043ab4cdc8b2c
+type: Request
+parentId: fld_d90d623381494890a4039bcff151349e
+modified: 1700216521323
+created: 1700216521323
+url: http://localhost:9090/bakong-service/api/v1/bakong/merchant/transactions
+name: GetMerchantTransactions
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698726136619
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

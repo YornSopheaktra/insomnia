@@ -1,0 +1,112 @@
+_id: req_b52ae72e2f854ed18f06aecd5e4d2f51
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570140
+created: 1700216570140
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceOwnTransferSIT
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "service_module": "TRANSFER",
+        "service_group": {
+            "code": "OWN_TRANSFER",
+            "name": "Own Transfer",
+            "description": "Own Transfer"
+        },
+        "services": [
+            {
+                "service_id": "transfer_own_account",
+                "txn_currency": [
+                    "USD",
+                    "KHR",
+                    "THB"
+                ],
+                "name": "Own Transfer",
+                "name_kh": "Own Transfer",
+                "description": "",
+                "service_bean": "defaultPaymentService",
+                "is_create_transaction": true,
+                "is_has_fee": false,
+                "product_code": "MBTF",
+                "transaction_code": "MTF",
+                "is_enabled_pre_order": false,
+                "is_repeatable": true,
+                "service_command": [
+                    "PAYMENT"
+                ],
+                "txn_limitation": [ 
+                    { 
+                        "txn_currency": "USD", 
+                        "max": 100000, 
+                        "min": 0.01 
+                    }, 
+                    { 
+                        "txn_currency": "KHR", 
+                        "max": 400000000, 
+                        "min": 50 
+                    }, 
+                    { 
+                        "txn_currency": "THB", 
+                        "max": 3300000, 
+                        "min": 1 
+                    } 
+                ], 
+                "daily_limitation": [ 
+                    { 
+                        "txn_currency": "USD", 
+                        "limit": 100000.0 
+                    }, 
+                    { 
+                        "txn_currency": "KHR", 
+                        "limit": 400000000 
+                    }, 
+                    { 
+                        "txn_currency": "THB", 
+                        "limit": 3300000 
+                    }
+                ],
+                "service_additional_configs": [
+                    {
+                        "txn_currency": "USD",
+                        "NARRATIVE": "Own Account Transfer"
+                    },
+                    {
+                        "txn_currency": "KHR",
+                         "NARRATIVE": "Own Account Transfer"
+                    },
+                    {
+                        "txn_currency": "THB",
+                        "NARRATIVE": "Own Account Transfer"
+                    }
+                ],
+                "status": null
+            }
+        ],
+        "channel": "CUSTOMER_MOBILE",
+        "channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1643005798482
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,29 @@
+_id: req_e9f13c6bd62345f39076a1244494b882
+type: Request
+parentId: fld_0d9739a15ea24f6f8792c43c094d0475
+modified: 1700216551365
+created: 1700216551365
+url: "{{ _.baseUrl }}/service-configuration/admin-rest/mobile_service_configs/17"
+name: New Request
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+authentication: {}
+metaSortKey: -1696317790873
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

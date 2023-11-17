@@ -1,0 +1,113 @@
+_id: req_5ef365810a0b4411af4b984da4aac4d4
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570157
+created: 1700216570157
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceCashToATM
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+        "service_module": "TRANSFER",
+        "service_group": {
+            "code": "CARDLESS",
+            "name": "Cash To ATM",
+            "description": "Cash To ATM"
+        },
+        "services": [
+            {
+                "service_id": "cash_to_atm",
+                "txn_currency": [
+                    "USD",
+                    "KHR"
+                ],
+    					 "logo": "https://api-pre.hatthabank.com:6443/hattha-service/api/1.0/file/CASH_TO_ATM_NEW/type/LOGO",
+                "name": "Cash To ATM",
+                "name_kh": "Cash To ATM",
+                "description": "Cash to ATM",
+                "service_bean": "defaultPaymentService",
+                "is_create_transaction": true,
+                "is_has_fee": false,
+                "product_code": "MBTP",
+                "transaction_code": "CARDLESS",
+                "is_enabled_pre_order": false,
+                "is_repeatable": false,
+                "service_command": [
+                    "PAYMENT"
+                ],
+                "service_spi": {
+                    "spi_code": "outbound",
+                    "action_code": "cardLessService",
+                    "step": [
+                        "POST_EXECUTE"
+                    ]
+                },
+                "txn_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "min": 10.00,
+                        "max": 1000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "min": 10000,
+                        "max": 4000000
+                    }
+                ],
+                "daily_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "limit": 1000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "limit": 4000000
+                    }
+                ],
+                "service_tier": [],
+                "service_additional_configs": [
+                    {
+                        "txn_currency": "USD",
+                        "OFFSETACC": "000001915110",
+                        "OFFSETCCY": "USD",
+                        "OFFSETBRN": "000",
+                        "NARRATIVE": "Cash to ATM",
+                        "CHGCOMP": "FEE_CHARGE_01"
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "OFFSETACC": "000001915123",
+                        "OFFSETCCY": "KHR",
+                        "OFFSETBRN": "000",
+                        "NARRATIVE": "Cash to ATM",
+                        "CHGCOMP": "FEE_CHARGE_01"
+                    }
+                ],
+                "status": null
+            }
+        ],
+        "channel": "CUSTOMER_MOBILE",
+        "channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1642999438341
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

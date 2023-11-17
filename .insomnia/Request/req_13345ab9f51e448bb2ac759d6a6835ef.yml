@@ -1,0 +1,70 @@
+_id: req_13345ab9f51e448bb2ac759d6a6835ef
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570137
+created: 1700216570137
+url: "{{ _.baseUrl }}/payment-service/payments/api/1.0/orders/create/execute"
+name: CreateAndExecuteOrder
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+      "amount": 5.0,
+      "purpose": "N/A",
+      "currency": "USD",
+      "cif": "114119112",
+      "account_number": "114119112",
+      "ext_transaction_id": null,
+      "branch_code": null,
+      "bank_code": null,
+      "remarks": "Merchant payment",
+      "service_name": "payment_service_merchant_deposit_usd",
+      "payer_user": {
+        "user_id": "114119112",
+        "account_number": "114119112"
+      },
+      "payee_user": {
+        "name": null,
+        "user_id": "001000079",
+        "account_number": "001000079021"
+      },
+      "product": {
+        "name": "MMSDEPOSIT",
+        "ref1": "Payment to merchant by scheduler"
+      },
+      "additional_ref": {
+        "merchant_bank": "Hattha Bank",
+        "sender_account": "85569298440",
+        "merchant_name": "Test Incoming 1",
+        "qr_code": null,
+        "sender_name": "Tra Zzz",
+        "merchant_id": "600159997716221",
+        "trx_hash": "4d246b3a079258d63d31472f79cd43baf165cf7b85c69876208a39cb2c50a192",
+        "sender_bank": "TrueMoney Cambodia"
+      },
+    	"channel":"CUSTOMER_MOBILE",
+    	"channel_type":"CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: channel
+    value: CUSTOMER_MOBILE
+authentication: {}
+metaSortKey: -1632893930830
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

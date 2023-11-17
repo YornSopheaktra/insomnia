@@ -1,0 +1,130 @@
+_id: req_c8d3ec1f564b4da29e4a6acfd6c2366a
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570190
+created: 1700216570190
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceIBBULKBakongCasa
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+        "service_module": "TRANSFER",
+        "service_group": {
+            "code": "BAKONG",
+            "name": "Bakong",
+            "description": "Bakong"
+        },
+        "services": [
+            {
+                "service_id": "p_transfer_bakong",
+                "txn_currency": [
+                    "USD",
+                    "KHR"
+                ],
+                "name": "Bulk Transfer Casa",
+                "name_kh": "Bulk Transfer Casa",
+                "description": "Bulk Transfer Casa",
+                "service_bean": "defaultPaymentService",
+                "is_create_transaction": true,
+                "is_has_fee": false,
+                "product_code": "BK05",
+                "transaction_code": "BTB",
+                "is_enabled_pre_order": false,
+                "is_repeatable": true,
+                "service_command": [
+                    "PAYMENT"
+                ],
+                "service_spi": {
+                    "spi_code": "outbound",
+                    "action_code": "bakongPaymentService",
+                    "step": [
+                        "POST_EXECUTE"
+                    ]
+                },
+                "txn_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "min": 0.01,
+                        "max": 100000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "min": 100,
+                        "max": 400000000
+                    }
+                ],
+                "daily_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "limit": 100000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "limit": 400000000
+                    },
+                    {
+                        "txn_currency": "THB",
+                        "limit": 320000
+                    }
+                ],
+                "service_tier": [],
+                "service_notification":[
+                    {
+                        "txn_currency": "USD",
+                        "service_bean": "",
+                        "notification_template": "Bank To Bank Through Bakong transfer is successful and ${ccy} ${amount} is deducted from your account ${accountNumber} on ${date} at ${time} via Hattha Bank Mobile"
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "service_bean": "",
+                        "notification_template": "Bank To Bank Through Bakong transfer is successful and ${ccy} ${amount} is deducted from your account ${accountNumber} on ${date} at ${time} via Hattha Bank Mobile"
+                    }
+                ],
+                 "service_additional_configs": [
+                    {
+                        "txn_currency": "USD",
+                        "OFFSETACC": "114119112",
+                        "OFFSETCCY": "USD",
+                        "OFFSETBRN": "000",
+                        "NARRATIVE": "Bulk Bank To Bank Through Bakong",
+                        "CHGCOMP": "TXN_FEE"
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "OFFSETACC": "114119112",
+                        "OFFSETCCY": "KHR",
+                        "OFFSETBRN": "000",
+                        "NARRATIVE": "Bulk Bank To Bank Through Bakong",
+                        "CHGCOMP": "TXN_FEE"
+                    }
+                ],
+                "status": null
+            }
+        ],
+        "channel": "IB",
+        "channel_type": "IB_WEB"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1643322861539
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

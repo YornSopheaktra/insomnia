@@ -1,0 +1,45 @@
+_id: req_b81a0fe7e6cf4cd7a9c7170e177831ec
+type: Request
+parentId: fld_6c338348418a4fda821b58ff2945610e
+modified: 1700216551144
+created: 1700216551144
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/telco_operators/create"
+name: CreateNewTelcoWithConfigSMART
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"operator_name": "SMART",
+    	"is_pinless": true,
+    	"is_pincode": true,
+    	"sequence": 1,
+    	"config": {
+    		"pinless_settle_account": "154402469018",
+    		"pincode_settle_account": "000001915075",
+    		"prefix_number": "086,010,093,098,069,070,096,016,015,087,081",
+    		"select_plan": "1,1.25,2,2.5,5,10,20,50",
+    		"select_plan_pin_code": "1,2,5,10,20,50",
+    		"input_option":"SELECT"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+authentication: {}
+metaSortKey: -1647000941910
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,39 @@
+_id: req_7a113bbe6ad14d59a5e957c96facfd93
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570130
+created: 1700216570130
+url: http://10.215.117.196:8080/hattha-service/payments/api/1.0/orders/execute/{%
+  response 'body', 'req_e4e7167dba944063b61546f2fdbd942b',
+  'b64::JC5kYXRhLm9yZGVyX2lk::46b', 'never', 60 %}
+name: ExecuteOrderMerchantPayment
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |
+    
+    {
+    	"cif": "154565646"
+    }
+parameters: []
+headers:
+  - name: addInfo3
+    value: "21312313"
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+authentication: {}
+metaSortKey: -1632598330295.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

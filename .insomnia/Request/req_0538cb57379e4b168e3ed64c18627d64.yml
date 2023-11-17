@@ -1,0 +1,115 @@
+_id: req_0538cb57379e4b168e3ed64c18627d64
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570154
+created: 1700216570154
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceBakongWallet
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"service_module": "TRANSFER",
+    	"service_group": {
+    		"code": "BAKONG_WALLET",
+    		"name": "Bakong wallet",
+    		"description": "Bakong"
+    	},
+    	"services": [
+    		{
+    			"service_id": "transfer_bakong_wallet",
+    			"txn_currency": [
+    				"USD",
+    				"KHR"
+    			],
+    			"name": "Bakong wallet Transfer",
+    			"name_kh": "Bakong wallet Transfer",
+    			"description": "Transfer to bakong wallet",
+    			"service_bean": "defaultPaymentService",
+    			"is_create_transaction": true,
+    			"is_has_fee": false,
+    			"product_code": "BK03",
+    			"transaction_code": "BKQ",
+    			"is_enabled_pre_order": false,
+    			"is_repeatable": false,
+    			"service_command": [
+    				"PAYMENT"
+    			],
+    			"service_spi": {
+    				"spi_code": "outbound",
+    				"action_code": "merchantPaymentBakongService",
+    				"step": [
+    					"POST_EXECUTE"
+    				]
+    			},
+    			"txn_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"min": 0.01,
+    					"max": 10000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"min": 100,
+    					"max": 40000000
+    				}
+    			],
+    			"daily_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"limit": 10000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"limit": 40000000
+    				}
+    			],
+    			"service_tier": [],
+    			"service_notification": [],
+    			"service_additional_configs": [
+    				{
+    					"txn_currency": "USD",
+    					"OFFSETACC": "388229133",
+    					"OFFSETCCY": "USD",
+    					"OFFSETBRN": "000",
+    					"NARRATIVE": "Transfer to Bankong wallet",
+    					"CHGCOMP": "TXN_FEE"
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"OFFSETACC": "388229133",
+    					"OFFSETCCY": "KHR",
+    					"OFFSETBRN": "000",
+    					"NARRATIVE": "Transfer to Bankong wallet",
+    					"CHGCOMP": "TXN_FEE"
+    				}
+    			],
+    			"status": null
+    		}
+    	],
+    	"channel": "CUSTOMER_MOBILE",
+    	"channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1643001293382.125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

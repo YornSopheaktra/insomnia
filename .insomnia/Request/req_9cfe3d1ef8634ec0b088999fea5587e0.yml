@@ -1,0 +1,83 @@
+_id: req_9cfe3d1ef8634ec0b088999fea5587e0
+type: Request
+parentId: fld_d90d623381494890a4039bcff151349e
+modified: 1700216521351
+created: 1700216521351
+url: http://localhost:9090/bakong-service/api/v1.0/partners/payment
+name: BakongCasaPOST-EXECUTE
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"order_id": "77d83ce5-6c1d-422d-95e2-1310a3411b73",
+    	"channel": "CUSTOMER_MOBILE",
+    	"ext_transaction_id": "BK05P{% now 'custom', 'hhmmss' %}",
+    	"action_code": "bakongPaymentService",
+    	"command": "PAYMENT",
+    	"status": "CREATED",
+    	"amount": 1.0,
+    	"fee": 0.0,
+    	"purpose": "Others",
+    	"remarks": "",
+    	"service": {
+    		"id": 85,
+    		"name": "Bakong Transfer Casa",
+    		"logo": null,
+    		"channel": null,
+    		"service_id": "transfer_bakong_casa",
+    		"name_kh": "Bakong Transfer Casa",
+    		"service_module": "TRANSFER",
+    		"service_group": "BAKONG"
+    	},
+    	"product": {
+    		"name": null,
+    		"ref1": "Dev Bank",
+    		"ref2": null,
+    		"ref3": null,
+    		"ref4": null,
+    		"ref5": null
+    	},
+    	"os": null,
+    	"bank_code": "DEVBKHPPXXX",
+    	"cross_currency": null,
+    	"hysa_fee": null,
+    	"hysa_fee_ccy": null,
+    	"fee_tier_id": 443,
+    	"is_repeatable": true,
+    	"currency": "USD",
+    	"fav_name": "",
+    	"payer_user": {
+    		"name": "CUSTOMER_154671008",
+    		"user_id": "154671008",
+    		"account_number": "168000097363",
+    		"account_ccy": "USD",
+    		"account_branch": "001",
+    		"account_type": "S",
+    		"account_class": "SIRISA"
+    	},
+    	"payee_user": null,
+    	"additional_ref": {
+    		"bank_code": "DEVBKHPPXXX",
+    		"receiver_account": "123456789",
+    		"bank_name": "Dev Bank",
+    		"receiver_name": "John Cena"
+    	},
+    	"equivalent_usd_amount": 1.0
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1700209215205
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

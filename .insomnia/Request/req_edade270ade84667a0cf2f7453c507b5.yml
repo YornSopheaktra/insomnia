@@ -1,0 +1,23 @@
+_id: req_edade270ade84667a0cf2f7453c507b5
+type: Request
+parentId: fld_d90d623381494890a4039bcff151349e
+modified: 1700216521344
+created: 1700216521344
+url: http://localhost:9090/bakong-service/api/v1/bakong/account_inquiry/phone/85569298440
+name: InquiryBakongWalletByPhone
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698651036642.875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

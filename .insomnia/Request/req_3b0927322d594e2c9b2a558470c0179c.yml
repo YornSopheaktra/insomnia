@@ -1,0 +1,117 @@
+_id: req_3b0927322d594e2c9b2a558470c0179c
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570163
+created: 1700216570163
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServicewithinTransferSIT
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "service_module": "TRANSFER",
+        "service_group": {
+            "code": "WITHIN",
+            "name": "Within Transfer",
+            "description": "Within Transfer"
+        },
+        "services": [
+            {
+                "service_id": "transfer_within",
+                "txn_currency": [
+                    "USD",
+                    "KHR",
+                    "THB"
+                ],
+                "name": "Within Transfer",
+                "name_kh": "Winthin Transfer",
+                "description": "",
+                "service_bean": "defaultPaymentService",
+                "is_create_transaction": true,
+                "is_has_fee": false,
+                "product_code": "MBTF",
+                "transaction_code": "WITHIN",
+                "is_enabled_pre_order": false,
+                "is_repeatable": true,
+                "service_command": [
+                    "PAYMENT"
+                ],
+                "txn_limitation": [ 
+                    { 
+                        "txn_currency": "USD", 
+                        "max": 100000, 
+                        "min": 0.01 
+                    }, 
+                    { 
+                        "txn_currency": "KHR", 
+                        "max": 400000000, 
+                        "min": 50 
+                    }, 
+                    { 
+                        "txn_currency": "THB", 
+                        "max": 3300000, 
+                        "min": 1 
+                    } 
+                ],
+                "daily_limitation": [ 
+                    { 
+                        "txn_currency": "USD", 
+                        "limit": 100000.0 
+                    }, 
+                    { 
+                        "txn_currency": "KHR", 
+                        "limit": 400000000 
+                    }, 
+                    { 
+                        "txn_currency": "THB", 
+                        "limit": 3300000 
+                    }
+                ],
+                "service_additional_configs": [
+                    {
+                        "txn_currency": "USD",
+                        "NARRATIVE": "Within Transfer"
+                    },
+                    {
+                        "txn_currency": "KHR",
+                         "NARRATIVE": "Within Transfer"
+                    },
+                    {
+                        "txn_currency": "THB",
+                        "NARRATIVE": "Within Transfer"
+                    }
+                ],
+                "status": null
+            }
+        ],
+        "channel": "CUSTOMER_MOBILE",
+        "channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+    id: pair_b4c35bc6790d4168b0c71fde06f6e1f2
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+    id: pair_de51542c1a8b45278a70b0887012e48a
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+    id: pair_117f9e789eae40d8ab721bf1611be0b7
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+    id: pair_1b91d7713fa04d4bb1cc5844e8cdc976
+  - name: Content-Type
+    value: application/json
+    id: pair_3565f54c44444d2abde6b80b4b558c61
+authentication: {}
+metaSortKey: -1643003678435
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,42 @@
+_id: req_e63495119fba4189b622439f4484d6e4
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551033
+created: 1700216551033
+url: "{{ _.baseUrl }}/service-configuration/sys_message"
+name: addSysMessageEW001
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"status": "ACTIVE",
+    	"code": "EW001",
+    	"message": "Sorry, you don't have enough balance to make payment",
+    	"message_kh": "សូមអភ័យទោស លោកអ្នកមិនមានសមតុល្យគ្រប់គ្រាន់ដើម្បីទូទាត់ទេ",
+    	"title": "Insufficient Balance",
+    	"title_kh": "សមតុល្យមិនគ្រប់គ្រាន់",
+    	"app_name": "global",
+    	"prefix": "",
+    	"version": "1"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636133681152.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

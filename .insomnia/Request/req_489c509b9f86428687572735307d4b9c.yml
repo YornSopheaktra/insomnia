@@ -1,0 +1,39 @@
+_id: req_489c509b9f86428687572735307d4b9c
+type: Request
+parentId: fld_6c338348418a4fda821b58ff2945610e
+modified: 1700216551155
+created: 1700216551155
+url: localhost:9092/service-configuration/api/v1.0/telco_operators/create
+name: CreateNewTelcoWithConfigBeelin
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"operator_name": "BEELINE",
+    	"is_pinless": false,
+    	"is_pincode": true,
+    	"sequence": 4,
+    	"config": {
+    		"pinless_settle_account": null,
+    		"pincode_settle_account": "000219095020",
+    		"prefix_number": "067,066,068,060,090",
+    		"select_plan": "1,2,5,10,20,50",
+    		"input_option":"SELECT"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_4de44d3531154934be67619d054b344d
+authentication: {}
+metaSortKey: -1646900126031.875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

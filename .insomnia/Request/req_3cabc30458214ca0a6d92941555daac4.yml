@@ -1,0 +1,59 @@
+_id: req_3cabc30458214ca0a6d92941555daac4
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570224
+created: 1700216570224
+url: "{{ _.baseUrl }}/payment-service/payments/api/1.0/orders/create"
+name: CreateOrderQRID
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"amount": 500.0,
+    	"purpose": "N/A",
+    	"currency": "KHR",
+    	"cif": "001000003",
+    	"ext_transaction_id": null,
+    	"branch_code": "000",
+    	"bank_code": null,
+    	"remarks": "Merchant payment",
+    	"service_id": "transfer_within",
+    	"payer_user": {
+    		"account_number": "001000003353",
+    		"user_id": "001000003"
+    	},
+    	"payee_user": {
+    		"account_number": "168978999999"
+    	},
+    	"product": {
+    		"name": "MMSDEPOSIT",
+    		"ref1": "Payment to merchant by scheduler"
+    	},
+    	"channel": "CUSTOMER_MOBILE",
+    	"channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: channel
+    value: CUSTOMER_MOBILE
+  - name: cif
+    value: "001000003"
+authentication: {}
+metaSortKey: -1632700040139.5625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

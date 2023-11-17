@@ -1,0 +1,46 @@
+_id: req_aa2f09ff24e84fc493ce7d0cd238c1a6
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551051
+created: 1700216551051
+url: "{{ _.baseUrl }}/service-configuration/admin-rest/sys_message"
+name: addSysMessageUP-RP001
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-2
+     {
+    	"created_at": "2023-02-23T07:22:10.347+00:00",
+    	"created_by": null,
+    	"modified_at": null,
+    	"modified_by": null,
+    	"status": "ACTIVE",
+    	"code": "UP-RP001",
+    	"message": "Your account is invalid. There is no phone number associated with it.",
+    	"message_kh": "គណនីរបស់អ្នកមិនត្រឹមត្រូវទេ។ មិនមានលេខទូរស័ព្ទដែលភ្ជាប់ជាមួយ។",
+    	"title": "Account invalid",
+    	"title_kh": "គណនីមិនត្រឹមត្រូវ",
+    	"app_name": "global",
+    	"prefix": null,
+    	"version": "1"
+    	}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636133681193.25
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

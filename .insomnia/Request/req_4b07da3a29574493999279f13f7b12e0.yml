@@ -1,0 +1,27 @@
+_id: req_4b07da3a29574493999279f13f7b12e0
+type: Request
+parentId: fld_5fe1f94a667242d08d775c7387f20e89
+modified: 1700216551377
+created: 1700216551377
+url: "{{ _.baseUrl }}/service-configuration/api/v1/bakong/bank/DEVBKHPPXXX"
+name: GetBankList
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+authentication: {}
+metaSortKey: -1700194875915
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

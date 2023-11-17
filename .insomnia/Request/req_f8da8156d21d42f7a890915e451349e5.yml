@@ -1,0 +1,55 @@
+_id: req_f8da8156d21d42f7a890915e451349e5
+type: Request
+parentId: fld_22b2bf2af2be418485e455a0c8f18097
+modified: 1700216551128
+created: 1700216551128
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/service_fields/batch/save"
+name: AddBatchServiceRepeatOther
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"fields_mappers": [
+    		{
+    			"service_id": "t_htb_qr_customer",
+    			"field_key": "qr_content",
+    			"field_value": "$.order_details.additional_ref.qr_code$",
+    			"field_label": "qr_content",
+    			"field_label_kh": "qr_content",
+    			"sequence": 1000,
+    			"txn_type": "DEBIT",
+    			"field_type": "static_field"
+    		},
+    		{
+    			"service_id": "t_htb_qr_customer",
+    			"field_key": "screen_id",
+    			"field_value": "HP",
+    			"field_label": "screen_id",
+    			"field_label_kh": "screen_id",
+    			"sequence": 1000,
+    			"txn_type": "DEBIT",
+    			"field_type": "static_field"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+authentication: {}
+metaSortKey: -1643913393300.375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

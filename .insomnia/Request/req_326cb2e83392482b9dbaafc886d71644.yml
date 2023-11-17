@@ -1,0 +1,42 @@
+_id: req_326cb2e83392482b9dbaafc886d71644
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551040
+created: 1700216551040
+url: "{{ _.baseUrl }}/service-configuration/sys_message"
+name: addSysMessageUP-EE002
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"status": "ACTIVE",
+    	"code": "UP-EE02",
+    	"message": "Your account has been activated on another device. This device is automatically deactivated from your account. You can re-activate your account on this device to access your Hattha Mobile Banking.",
+    	"message_kh": "គណនីរបស់អ្នកត្រូវបានបើកដំណើរការនៅលើស្មាតហ្វូនផ្សេងទៀត​។ ស្មាតហ្វូននេះត្រូវបានបិទដោយស្វ័យប្រវត្តិពីគណនីរបស់អ្នក។ អ្នកអាចដំណើរការគណនីរបស់អ្នកឡើងវិញនៅលើស្មាតហ្វូននេះ ដោយចូលប្រើម្តងទៀតនៅលើ ហត្ថាម៉ូប៊ែលរបស់អ្នក។",
+    	"title": "Re-Activation",
+    	"title_kh": "Re-Activation",
+    	"app_name": "global",
+    	"prefix": " ",
+    	"version": "1.0"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636133681171.375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

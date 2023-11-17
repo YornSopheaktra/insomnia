@@ -1,0 +1,32 @@
+_id: req_497e7ec6570e4d55b2fe9d287d707764
+type: Request
+parentId: fld_b9b9886f134b4081a1d549a225418b81
+modified: 1700216551344
+created: 1700216551344
+url: "{{ _.baseUrl
+  }}/service-configuration/api/v1.0/mini-statement/field-mapper/config"
+name: GetMini-ConfigMapper
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1683777929829
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

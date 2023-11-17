@@ -1,0 +1,40 @@
+_id: req_15f79441af2443cd8312b808a512af77
+type: Request
+parentId: fld_6c338348418a4fda821b58ff2945610e
+modified: 1700216551161
+created: 1700216551161
+url: localhost:9092/service-configuration/api/v1.0/telco_operators/create
+name: CreateNewTelcoWithConfigQBMOBILE
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"operator_name": "QB MOBILE",
+    	"status": "INACTIVE",
+    	"is_pinless": true,
+    	"is_pincode": true,
+    	"sequence": 6,
+    	"config": {
+    		"pinless_settle_account": "001000061012",
+    		"pincode_settle_account": "000242604015",
+    		"prefix_number": "084,083,080,013",
+    		"select_plan": "1,2,5,10,20,50",
+    		"input_option":"SELECT"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_4de44d3531154934be67619d054b344d
+authentication: {}
+metaSortKey: -1646895085237.9688
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

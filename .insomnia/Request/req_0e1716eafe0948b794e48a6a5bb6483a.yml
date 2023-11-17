@@ -1,0 +1,27 @@
+_id: req_0e1716eafe0948b794e48a6a5bb6483a
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551019
+created: 1700216551019
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/sys-message/app-name/a"
+name: ListSysMessageSIT
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636103946249.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

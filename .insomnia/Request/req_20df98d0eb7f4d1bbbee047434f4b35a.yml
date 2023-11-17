@@ -1,0 +1,23 @@
+_id: req_20df98d0eb7f4d1bbbee047434f4b35a
+type: Request
+parentId: fld_d90d623381494890a4039bcff151349e
+modified: 1700216521330
+created: 1700216521330
+url: http://localhost:9090/bakong-service/api/v1/bakong/transaction/hash_id/805cac1b628965d7a1f2f31bc6eb2932f2882d9547d382f9d61e26b5dba32f4b
+name: GetTransactionHashByHashId
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698667994702
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

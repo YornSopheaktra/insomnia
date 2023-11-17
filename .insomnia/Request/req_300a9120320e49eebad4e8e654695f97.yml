@@ -1,0 +1,27 @@
+_id: req_300a9120320e49eebad4e8e654695f97
+type: Request
+parentId: fld_e90231a9e6e745518fa2dfc98fd56cc9
+modified: 1700216570108
+created: 1700216570108
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services/transfer_ncs"
+name: getSservice
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1700117601446
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

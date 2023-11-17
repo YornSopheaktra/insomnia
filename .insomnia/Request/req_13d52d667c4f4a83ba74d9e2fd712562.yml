@@ -1,0 +1,49 @@
+_id: req_13d52d667c4f4a83ba74d9e2fd712562
+type: Request
+parentId: fld_6c338348418a4fda821b58ff2945610e
+modified: 1700216551158
+created: 1700216551158
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/telco_operators/create"
+name: CreateNewTelcoWithConfigSeatel
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"operator_name": "SEATEL",
+    	"is_pinless": false,
+    	"is_pincode": true,
+    	"status": "INACTIVE",
+    	"sequence": 5,
+    	"config": {
+    		"pinless_settle_account": "001000061012",
+    		"pincode_settle_account": null,
+    		"prefix_number": "018",
+    		"select_plan": "1,20,50",
+    		"input_option":"SELECT"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_f6009793f74d40d8aae57357b36e1d10
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+    id: pair_8d40fb2f054e4440a6043a34d249c880
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+    id: pair_b12d37df6fd54da581ebb7496463d8e8
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+    id: pair_ddcdfc6083cb46eb9fc76c736d3a3a2d
+authentication: {}
+metaSortKey: -1646890044444.0625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

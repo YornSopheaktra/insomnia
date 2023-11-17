@@ -1,0 +1,155 @@
+_id: req_e4fce58d0d55469b8271589b5575df68
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570160
+created: 1700216570160
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceTransferFast
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"service_module": "TRANSFER",
+    	"service_group": {
+    		"code": "FAST",
+    		"name": "Fast Transfer",
+    		"description": "Fast Transfer"
+    	},
+    	"services": [
+    		{
+    			"service_id": "transfer_fast",
+    			"txn_currency": [
+    				"USD",
+    				"KHR"
+    			],
+    			"name": "Fast Transfer",
+    			"name_kh": "Fast Transfer",
+    			"description": "Fast Transfer",
+    			"service_bean": "defaultPaymentService",
+    			"is_create_transaction": true,
+    			"is_has_fee": true,
+    			"product_code": "FMOU",
+    			"transaction_code": "FSM",
+    			"is_enabled_pre_order": false,
+    			"is_repeatable": true,
+    			"ext_ref_lenght": 5,
+    			"service_command": [
+    				"PAYMENT"
+    			],
+    			"service_spi": {
+    				"spi_code": "outbound",
+    				"action_code": "fastPaymentService",
+    				"step": [
+    					"POST_EXECUTE"
+    				]
+    			},
+    			"txn_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"max": 50000,
+    					"min": 0.01
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"max": 200000000,
+    					"min": 100
+    				}
+    			],
+    			"daily_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"limit": 50000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"limit": 200000000
+    				}
+    			],
+    			"service_tier": [
+    				{
+    					"txn_currency": "USD",
+    					"from": 0.01,
+    					"to": 1000,
+    					"fee": 1,
+    					"type": "FIXED",
+    					"operation": "DR"
+    				},
+    				{
+    					"txn_currency": "USD",
+    					"from": 1000.01,
+    					"to": 5000,
+    					"fee": 2,
+    					"type": "FIXED",
+    					"operation": "DR"
+    				},
+    				{
+    					"txn_currency": "USD",
+    					"from": 5000.01,
+    					"to": 50000,
+    					"fee": 3,
+    					"type": "FIXED",
+    					"operation": "DR"
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"from": 100,
+    					"to": 4000000,
+    					"fee": 4000,
+    					"type": "FIXED",
+    					"operation": "DR"
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"from": 4000001,
+    					"to": 20000000,
+    					"fee": 8000,
+    					"type": "FIXED",
+    					"operation": "DR"
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"from": 20000001,
+    					"to": 400000000,
+    					"fee": 12000,
+    					"type": "FIXED",
+    					"operation": "DR"
+    				}
+    			],
+    			"service_notification": [],
+    			"service_additional_configs": [
+    				{
+    					"OFFSETBRN": "000",
+    					"OFFSETACC": "000344768010",
+    					"txn_currency": "KHR",
+    					"CHGCOMP": "FAST_CHARGE",
+    					"OFFSETCCY": "KHR",
+    					"NARRATIVE": "Fast Transfer"
+    				}
+    			],
+    			"status": null
+    		}
+    	],
+    	"channel": "CUSTOMER_MOBILE",
+    	"channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1642998378317.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

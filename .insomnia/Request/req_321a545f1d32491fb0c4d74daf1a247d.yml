@@ -1,0 +1,114 @@
+_id: req_321a545f1d32491fb0c4d74daf1a247d
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570193
+created: 1700216570193
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceKHQRBakongWalletOffDomain
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "service_module": "TRANSFER",
+        "service_group": {
+            "code": "SCAN_BAKONG_WALLET",
+            "name": "Bakong wallet",
+            "description": "Bakong wallet off domain"
+        },
+        "services": [
+            {
+                "service_id": "t_bakong_qr_wallet_off",
+                "txn_currency": [
+                    "USD",
+                    "KHR"
+                ],
+                "name": "Scan Pay bakong wallet off domain",
+                "name_kh": "Scan Pay bakong wallet off domain",
+                "description": "Scan Pay bakong wallet off domain",
+                "service_bean": "defaultPaymentService",
+                "is_create_transaction": true,
+                "is_has_fee": false,
+                "product_code": "BQ03",
+                "transaction_code": "BKQ",
+                "is_enabled_pre_order": false,
+                "is_repeatable": false,
+                "service_command": [
+                    "PAYMENT"
+                ],
+                "service_spi": {
+                    "spi_code": "outbound",
+                    "action_code": "merchantPaymentBakongService",
+                    "step": [
+                        "POST_EXECUTE"
+                    ]
+                },
+                "txn_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "min": 0.01,
+                        "max": 50000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "min": 100,
+                        "max": 200000000
+                    }
+                ],
+                "daily_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "limit": 50000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "limit": 200000000
+                    }
+                ],
+                "service_tier": [],
+                "service_additional_configs": [
+                    {
+                        "txn_currency": "USD",
+                        "OFFSETACC": "114119112",
+                        "OFFSETCCY": "USD",
+                        "OFFSETBRN": "000",
+                        "NARRATIVE": "Scan pay to Bakong Wallet off domain",
+                        "CHGCOMP": "FEE_CHARGE_01"
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "OFFSETACC": "114119112",
+                        "OFFSETCCY": "KHR",
+                        "OFFSETBRN": "000",
+                        "NARRATIVE": "Scan pay to Bakong Wallet off domain",
+                        "CHGCOMP": "FEE_CHARGE_01"
+                    }
+                ],
+                "status": null
+            }
+        ],
+        "channel": "CUSTOMER_MOBILE",
+        "channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1642725062778
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

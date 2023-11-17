@@ -1,0 +1,112 @@
+_id: req_7a333e3aa1e84a819c947f2c2ad53646
+type: Request
+parentId: fld_27f51941eb8f4467b8e588bf6a8b4042
+modified: 1700216551280
+created: 1700216551280
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/service_fields/batch/save"
+name: AddBatchServiceMapperCustomerQRIDCredit
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"fields_mappers": [
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_htb_qr_customer",
+    			"field_key": "from",
+    			"field_value": "Received from",
+    			"field_label": "Received From",
+    			"field_label_kh": "ទទួលប្រាក់ពី",
+    			"sequence": 1,
+    			"txn_type": "CREDIT",
+    			"field_type": "title"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_htb_qr_customer",
+    			"field_key": "from_account",
+    			"field_value": "$.order_details.payer_user.account_type$ $.order_details.payer_user.account_number$ | $.order_details.payer_user.account_ccy$",
+    			"field_label": "From Account",
+    			"field_label_kh": "ពីគណនី",
+    			"sequence": 2,
+    			"txn_type": "CREDIT",
+    			"field_type": "sub_title"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_htb_qr_customer",
+    			"field_key": "receiver_account",
+    			"field_value": "$.order_details.payee_user.account_type$ $.order_details.payee_user.account_number$ | $.order_details.payee_user.account_ccy$",
+    			"field_label": "Receiver Account",
+    			"field_label_kh": "គណនីទទួល",
+    			"sequence": 3,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_htb_qr_customer",
+    			"field_key": "trx_id",
+    			"field_value": "$.ext_transaction_id$",
+    			"field_label": "Trx ID",
+    			"field_label_kh": "លេខប្រត្តិប័ត្តការ",
+    			"sequence": 4,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_htb_qr_customer",
+    			"field_key": "remark",
+    			"field_value": "$.order_details.remarks$",
+    			"field_label": "Remark",
+    			"field_label_kh": "កំណត់សម្គាល់",
+    			"sequence": 5,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_htb_qr_customer",
+    			"field_key": "ref_no",
+    			"field_value": "$.core_ref_no$",
+    			"field_label": "Ref No",
+    			"field_label_kh": "លេខយោង",
+    			"sequence": 6,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_htb_qr_customer",
+    			"field_key": "trx_date",
+    			"field_value": "$.transaction_date$",
+    			"field_label": "Trx Date",
+    			"field_label_kh": "កាលបរិច្ឆេទ",
+    			"sequence": 7,
+    			"txn_type": "CREDIT",
+    			"field_type": "field"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1643818208046.3594
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

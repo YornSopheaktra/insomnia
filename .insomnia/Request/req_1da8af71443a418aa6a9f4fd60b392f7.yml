@@ -1,0 +1,36 @@
+_id: req_1da8af71443a418aa6a9f4fd60b392f7
+type: Request
+parentId: fld_4708ec755e4243559ea1f32bd25d6fbd
+modified: 1700216551310
+created: 1700216551310
+url: "{{ _.baseUrl }}/service-configuration/mobile_service_configs/7"
+name: servceConfigBakongCasa
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"configs": {
+    		"repeatable": "true"
+    	}
+    }
+parameters: []
+headers:
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1659119724582.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,47 @@
+_id: req_608a1427368a4390b906e4c6381666cd
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551011
+created: 1700216551011
+url: "{{ _.baseUrl }}/service-configuration/admin-rest/sys_message"
+name: addSysMessage
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-2
+     {
+    		"created_at": "2021-12-24T09:22:45.693+00:00",
+    		"created_by": null,
+    		"modified_at": "2022-04-11T08:39:40.141+00:00",
+    		"modified_by": null,
+    		"status": "ACTIVE",
+    		"id": 2,
+    		"code": "UP-P002",
+    		"message": "The PIN you enter is not match the condition required, please check PIN policy by tap \"QUICK TIPS\" on top-right for detail then try again.",
+    		"message_kh": "លេខកូដ PIN ដែលលោកអ្នកបញ្ចូលមិនត្រូវនឹងលក្ខខណ្ឌរបស់ ធនាគាហត្ថាទេ, សូមពិនិត្យមើលគោលការណ៍ PIN ដោយចុចលើពាក្យ \"ការណែនាំ\" នៅខាងលើផ្នែកខាងស្តាំដើម្បីមើលព័ត៌មាន លម្អិតរួចព្យាយាមម្តងទៀត",
+    		"title": null,
+    		"title_kh": null,
+    		"app_name": "global",
+    		"prefix": "",
+    		"version": null
+    	}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636133681199.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

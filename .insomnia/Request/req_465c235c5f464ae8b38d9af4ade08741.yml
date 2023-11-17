@@ -1,0 +1,115 @@
+_id: req_465c235c5f464ae8b38d9af4ade08741
+type: Request
+parentId: fld_27f51941eb8f4467b8e588bf6a8b4042
+modified: 1700216551283
+created: 1700216551283
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/service_fields/batch/save"
+name: AddBatchServiceMapperThaiCrossBorder
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"fields_mappers": [
+    		{
+    			"service_id": "t_cross_border_qr",
+    			"field_key": "to",
+    			"field_value": "Paid To",
+    			"field_label": "Paid To",
+    			"field_label_kh": "បានទូទាត់ប្រាក់ទៅ",
+    			"sequence": 1,
+    			"txn_type": "DEBIT",
+    			"field_type": "title"
+    		},
+    		{
+    			"service_id": "t_cross_border_qr",
+    			"field_key": "receiver_name",
+    			"field_value": "$.order_details.additional_ref.receiver_name$",
+    			"field_label": "Receiver Name",
+    			"field_label_kh": "ឈ្មោះអ្នកទទួល",
+    			"sequence": 2,
+    			"txn_type": "DEBIT",
+    			"field_type": "sub_title"
+    		},
+    		{
+    			"service_id": "t_cross_border_qr",
+    			"field_key": "trx_id",
+    			"field_value": "$.ext_transaction_id$",
+    			"field_label": "Trx ID",
+    			"field_label_kh": "លេខប្រត្តិប័ត្តការ",
+    			"sequence": 3,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"service_id": "t_cross_border_qr",
+    			"field_key": "from_account",
+    			"field_value": "$.order_details.payer_user.account_type$ ($.order_details.payer_user.account_number$ | $.order_details.payer_user.account_ccy$)",
+    			"field_label": "From Account",
+    			"field_label_kh": "ពីគណនី",
+    			"sequence": 4,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"service_id": "t_cross_border_qr",
+    			"field_key": "to_account",
+    			"field_value": "$.order_details.additional_ref.receiver_account$",
+    			"field_label": "Merchant ID",
+    			"field_label_kh": "លេខសម្គាល់អាជីវករ",
+    			"sequence": 5,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"service_id": "t_cross_border_qr",
+    			"field_key": "remark",
+    			"field_value": "$.order_details.remarks$",
+    			"field_label": "Remark",
+    			"field_label_kh": "កំណត់សម្គាល់",
+    			"sequence": 6,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"service_id": "t_cross_border_qr",
+    			"field_key": "ref_no",
+    			"field_value": "$.partner_data.core_ref_no$",
+    			"field_label": "Ref No",
+    			"field_label_kh": "លេខយោង",
+    			"sequence": 8,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"service_id": "t_cross_border_qr",
+    			"field_key": "trx_date",
+    			"field_value": "$.transaction_date$",
+    			"field_label": "Trx Date",
+    			"field_label_kh": "កាលបរិច្ឆេទ",
+    			"sequence": 9,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+authentication: {}
+metaSortKey: -1643904169426.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

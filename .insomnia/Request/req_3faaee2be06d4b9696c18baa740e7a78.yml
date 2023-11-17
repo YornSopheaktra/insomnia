@@ -1,0 +1,27 @@
+_id: req_3faaee2be06d4b9696c18baa740e7a78
+type: Request
+parentId: fld_ad9eb247efc848239a7ca4333e971d8e
+modified: 1700216551334
+created: 1700216551334
+url: "{{ _.baseUrl }}/service-configuration/api/v1/bakong/bank/DEVBKHPPXXX"
+name: ListBiller
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+authentication: {}
+metaSortKey: -1656317041875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,52 @@
+_id: req_433fce30ab4a4683af7f062c9f3ec6c0
+type: Request
+parentId: fld_6c338348418a4fda821b58ff2945610e
+modified: 1700216551177
+created: 1700216551177
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/telco_operators/create"
+name: CreateNewTelcoWithConfigCootel
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"operator_name": "COOTEL",
+    	"is_pinless": true,
+    	"is_pincode": true,
+    	"sequence": 8,
+    	"config": {
+    		"pinless_settle_account": "000216802012",
+    		"pincode_settle_account": "001000061012",
+    		"prefix_number": "038",
+    		"select_plan": "1,2,5,10,20,50",
+    		"select_plan_pin_code": "1,2,5,10,20,50",
+    		"input_option":"SELECT"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_d43ab85c54ea4c288fb7b752fa8e5c00
+  - id: pair_b28c820848174a5badb286cdacf5e727
+    name: x-api-key
+    value: "{{ _.web_api_key }}"
+    description: ""
+  - id: pair_f6caee5d13c94910bfe3ddf6a6a0e9a8
+    name: client_id
+    value: "{{ _.web_client_id }}"
+    description: ""
+  - id: pair_7ed673ea08eb48dbb9bd000c6a99db8c
+    name: client_secret
+    value: "{{ _.web_client_secret }}"
+    description: ""
+authentication: {}
+metaSortKey: -1646910207619.6875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

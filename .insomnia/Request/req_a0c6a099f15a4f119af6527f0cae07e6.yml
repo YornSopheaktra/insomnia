@@ -1,0 +1,42 @@
+_id: req_a0c6a099f15a4f119af6527f0cae07e6
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551029
+created: 1700216551029
+url: "{{ _.baseUrl }}/service-configuration/sys_message"
+name: addSysMessageEKHR001
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"status": "ACTIVE",
+    	"code": "EKHR001",
+    	"message": "Sorry, you must have a KHR currency account to make payment",
+    	"message_kh": "សូមអភ័យទោស អ្នកត្រូវមានគណនីរូបិយប័ណ្ណខ្មែររៀល ដើម្បីទូទាត់",
+    	"title": "Invalid Source Account",
+    	"title_kh": "គណនីមិនសមស្រប",
+    	"app_name": "global",
+    	"prefix": "",
+    	"version": "1"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636133681155.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

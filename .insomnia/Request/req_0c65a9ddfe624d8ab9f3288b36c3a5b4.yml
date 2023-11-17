@@ -1,0 +1,125 @@
+_id: req_0c65a9ddfe624d8ab9f3288b36c3a5b4
+type: Request
+parentId: fld_cc31bad9dd00486e9c696981747911b8
+modified: 1700216570089
+created: 1700216570089
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceCampaignShareCashBack
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"service_module": "PAYMENT",
+    	"service_group": {
+    		"code": "CASHBACK",
+    		"name": "Cash back service",
+    		"description": "Cash back service"
+    	},
+    	"services": [
+    		{
+    			"service_id": "campaign_share_cashback",
+    			"txn_currency": [
+    				"USD",
+    				"KHR",
+    				"THB"
+    			],
+    			"name": "Campaign Share Cash back",
+    			"name_kh": "Campaign Share Cash back",
+    			"description": "Campaign Share Cash back",
+    			"service_bean": "defaultPaymentService",
+    			"is_create_transaction": true,
+    			"is_has_fee": false,
+    			"product_code": "CBSA",
+    			"transaction_code": "CBP",
+    			"is_enabled_pre_order": false,
+    			"is_repeatable": false,
+    			"service_command": [
+    				"PAYMENT"
+    			],
+    			"txn_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"min": 0.01,
+    					"max": 500000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"min": 100,
+    					"max": 4000000000
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"min": 1,
+    					"max": 16000000
+    				}
+    			],
+    			"daily_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"limit": 500000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"limit": 4000000000
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"limit": 16000000
+    				}
+    			],
+    			"service_tier": [],
+    			"service_notification": [],
+    			"service_additional_configs": [
+    				{
+    					"OFFSETBRN": "000",
+    					"OFFSETACC": "644169111",
+    					"txn_currency": "USD",
+    					"CFG_IS_PAYEE_GL": "true",
+    					"OFFSETCCY": "USD",
+    					"NARRATIVE": "Share Cash Back Payment"
+    				},
+    				{
+    					"OFFSETBRN": "000",
+    					"OFFSETACC": "644169111",
+    					"txn_currency": "KHR",
+    					"CFG_IS_PAYEE_GL": "true",
+    					"OFFSETCCY": "KHR",
+    					"NARRATIVE": "Share Campaign Cash back"
+    				},
+    				{
+    					"OFFSETBRN": "000",
+    					"OFFSETACC": "644169111",
+    					"txn_currency": "THB",
+    					"CFG_IS_PAYEE_GL": "true",
+    					"OFFSETCCY": "THB",
+    					"NARRATIVE": "Share Campaign Cash back"
+    				}
+    			]
+    		}
+    	],
+    	"channel": "CUSTOMER_MOBILE",
+    	"channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1697474548568
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

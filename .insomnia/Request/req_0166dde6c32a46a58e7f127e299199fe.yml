@@ -1,0 +1,27 @@
+_id: req_0166dde6c32a46a58e7f127e299199fe
+type: Request
+parentId: fld_6c338348418a4fda821b58ff2945610e
+modified: 1700216551164
+created: 1700216551164
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/telco_operators/list"
+name: GetTelcoOperatorConfig
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1647704269830
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,31 @@
+_id: req_93a48348f6ef46eba3792a2823ab337e
+type: Request
+parentId: fld_22b2bf2af2be418485e455a0c8f18097
+modified: 1700216551077
+created: 1700216551077
+url: "{{ _.baseUrl
+  }}/service-configuration/api/v1.0/service_fields/service_id/campaign_share_ca\
+  shback/txn_type/CREDIT"
+name: GetServiceMapper
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+authentication: {}
+metaSortKey: -1643950566244
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

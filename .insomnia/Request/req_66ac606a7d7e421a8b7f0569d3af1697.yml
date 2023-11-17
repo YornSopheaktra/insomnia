@@ -1,0 +1,36 @@
+_id: req_66ac606a7d7e421a8b7f0569d3af1697
+type: Request
+parentId: fld_63879872aa644d48b157c61fca4138a7
+modified: 1700216570072
+created: 1700216570072
+url: "{{ _.baseUrl }}/payment-service/api/1.0/cos/update"
+name: UpdateCos
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"class_code":"HYSA_FEE_1",
+    	"service_id": "transfer_own_account",
+    	"update_status": "INACTIVE"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+authentication: {}
+metaSortKey: -1677967870561
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

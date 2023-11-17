@@ -1,0 +1,55 @@
+_id: req_8b0f0df5872b4757a4cc8aa7e96f5c96
+type: Request
+parentId: fld_63879872aa644d48b157c61fca4138a7
+modified: 1700216570068
+created: 1700216570068
+url: "{{ _.baseUrl }}/payment-service/api/1.0/cos/create"
+name: CreateFree3
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"class_code": "HYSA_FEE_3",
+    	"name": "Hysa Fee Free 3 time",
+    	"user_type": "PAYER",
+    	"account_classes": "SIRIHF,SINIHF",
+    	"service_ids": [
+    		"transfer_own_account",
+    		"transfer_within",
+    		"transfer_pipay",
+    		"transfer_fast",
+    		"cash_to_atm",
+    		"transfer_bakong",
+    		"transfer_bakong_casa",
+    		"transfer_bakong_wallet",
+    		"transfer_bakong_wallet_od",
+    		"transfer_kscb",
+    		"t_htb_qr_customer",
+    		"t_htb_qr_merchant"
+    	],
+    	"free_count": 3,
+    	"operator": ">="
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1678278166053
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

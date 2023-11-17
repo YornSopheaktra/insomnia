@@ -1,0 +1,101 @@
+_id: req_1c7c155a1bf148ae934cf00042eb145a
+type: Request
+parentId: fld_27f51941eb8f4467b8e588bf6a8b4042
+modified: 1700216551224
+created: 1700216551224
+url: http://10.215.117.196:8080/service-configuration/api/v1.0/service_fields/batch/save
+name: AddBatchServiceMapperBakongWalletOdKHQR
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"fields_mappers":[
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_bakong_qr_wallet_off",
+    			"field_key": "to",
+    			"field_value": "Pay to",
+    			"field_label": "To",
+    			"field_label_kh": "ទៅ",
+    			"sequence": 1,
+    			"txn_type": "DEBIT",
+    			"field_type": "title"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_bakong_qr_wallet_off",
+    			"field_key": "receiver_name",
+    			"field_value": "$.order_details.additional_ref.receiver_name$",
+    			"field_label": "Receiver Name",
+    			"field_label_kh": "ឈ្មោះអ្នកទទួល",
+    			"sequence": 2,
+    			"txn_type": "DEBIT",
+    			"field_type": "sub_title"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_bakong_qr_wallet_off",
+    			"field_key": "trx_id",
+    			"field_value": "$.ext_transaction_id$",
+    			"field_label": "Trx ID",
+    			"field_label_kh": "លេខប្រត្តិប័ត្តការ",
+    			"sequence": 3,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_bakong_qr_wallet_off",
+    			"field_key": "from_account",
+    			"field_value": "$.order_details.payer_user.account_type$ $.order_details.payer_user.account_number$ | $.order_details.txn_currency$",
+    			"field_label": "From Account",
+    			"field_label_kh": "ពីគណនី",
+    			"sequence": 4,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_bakong_qr_wallet_off",
+    			"field_key": "remark",
+    			"field_value": "$.order_details.remarks$",
+    			"field_label": "Remark",
+    			"field_label_kh": "កំណត់សម្គាល់",
+    			"sequence": 6,
+    			"txn_type": "DEBIT",
+    			"field_type": "field"
+    		},
+    		{
+    			"status": "ACTIVE",
+    			"service_id": "t_bakong_qr_wallet_off",
+    			"field_key": "ref_no",
+    			"field_value": "$.ext_transaction_id$",
+    			"field_label": "Ref No",
+    			"field_label_kh": "លេខយោង",
+    			"sequence": 7,
+    			"txn_type": "DEBIT",
+    			"field_type": "static_field"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+authentication: {}
+metaSortKey: -1643834477935
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

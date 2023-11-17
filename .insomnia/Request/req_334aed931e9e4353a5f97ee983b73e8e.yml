@@ -1,0 +1,42 @@
+_id: req_334aed931e9e4353a5f97ee983b73e8e
+type: Request
+parentId: fld_b065d4975f7e406489763ea13518434a
+modified: 1700216551026
+created: 1700216551026
+url: "{{ _.baseUrl }}/service-configuration/sys_message"
+name: addSysMessageCTA001
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"status": "ACTIVE",
+    	"code": "CTA001",
+    	"message": "Sorry, this service is available only in Thailand",
+    	"message_kh": "សូមអភ័យទោស សេវាកម្មនេះមានតែនៅក្នុងប្រទេសថៃប៉ុណ្ណោះ",
+    	"title": "Invalid Location",
+    	"title_kh": "ទីតាំងមិនត្រឹមត្រូវ",
+    	"app_name": "global",
+    	"prefix": "",
+    	"version": "1"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1636133681162
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

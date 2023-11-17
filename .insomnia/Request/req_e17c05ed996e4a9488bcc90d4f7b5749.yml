@@ -1,0 +1,66 @@
+_id: req_e17c05ed996e4a9488bcc90d4f7b5749
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570209
+created: 1700216570209
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceKHQRMerchantDepositOffDomain
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "service_module": "PAYMENT",
+        "service_group": {
+            "code": "merchant-deposit",
+            "name": "Merchant Deposit",
+            "description": "Merchant Deposit"
+        },
+        "services": [
+            {
+                "service_id": "merchant-deposit_od",
+                "txn_currency": [
+                    "USD",
+                    "KHR"
+                ],
+                "name": "Merchant Deposit Off Domain",
+                "name_kh": "Merchant Deposit Off Domain",
+                "description": "Merchant Deposit Off Domain",
+                "service_bean": "defaultPaymentService",
+                "is_create_transaction": true,
+                "is_has_fee": false,
+                "product_code": "BQ04",
+                "transaction_code": "BKQ",
+                "is_enabled_pre_order": false,
+                "is_repeatable": false,
+                "service_command": [
+                    "PAYMENT"
+                ],
+    					"status": "INACTIVE"
+            }
+        ],
+        "channel": "CUSTOMER_MOBILE",
+        "channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1642709355729
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

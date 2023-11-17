@@ -1,0 +1,43 @@
+_id: req_5a6ae6474aa648d6b91e9b5b999f985b
+type: Request
+parentId: fld_4708ec755e4243559ea1f32bd25d6fbd
+modified: 1700216551322
+created: 1700216551322
+url: "{{ _.baseUrl }}/service-configuration/mobile_service_configs"
+name: servceConfigPinless
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"service_module": "TOPUP",
+    	"service_id": "topup_pinless",
+    	"configs": {
+    		"shareable": "true",
+    		"downloadable": "true",
+    		"header_title": "TOP UP",
+    		"repeatable": "true",
+    		"favorable": "true",
+    		"header_title_kh": "បញ្ចូលលុយទូរស៏ព្ទ"
+    	}
+    }
+parameters: []
+headers:
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1664000143826.2188
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,10 @@
+_id: fld_94357db269654b30bc9ee384da5319a9
+type: RequestGroup
+parentId: wrk_9578cff22e014fb4a22d8518a1f24964
+modified: 1700216550980
+created: 1700216550980
+name: ServiceConfiguration
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1000000000

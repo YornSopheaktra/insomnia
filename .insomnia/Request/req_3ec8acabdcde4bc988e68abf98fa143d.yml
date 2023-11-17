@@ -1,0 +1,65 @@
+_id: req_3ec8acabdcde4bc988e68abf98fa143d
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570134
+created: 1700216570134
+url: http://172.16.28.188:7802/FCUBSRTService/FCUBSRTService
+name: CoreBanking
+description: ""
+method: POST
+body:
+  mimeType: text/xml
+  text: >+
+    <?xml version="1.0"?>
+
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSRTService">
+     <soapenv:Body>
+        <fcub:CREATETRANSACTION_IOPK_REQ>
+          <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SYSMB</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:MSGID/>
+            <fcub:CORRELID/>
+            <fcub:USERID>SYS_MOBILE</fcub:USERID>
+            <fcub:BRANCH>XXX</fcub:BRANCH>
+            <fcub:MODULEID/>
+            <fcub:SERVICE>FCUBSRTService</fcub:SERVICE>
+            <fcub:OPERATION>CreateTransaction</fcub:OPERATION>
+            <fcub:SOURCE_OPERATION>CreateTransaction</fcub:SOURCE_OPERATION>
+            <fcub:SOURCE_USERID>SYS_MOBILE</fcub:SOURCE_USERID>
+          </fcub:FCUBS_HEADER>
+          <fcub:FCUBS_BODY>
+            <fcub:Transaction-Details-IO>
+              <fcub:XREF>BQ041211434533281</fcub:XREF>
+              <fcub:PRD>BQ04</fcub:PRD>
+              <fcub:BRN>014</fcub:BRN>
+              <fcub:TXNACC>001202563036</fcub:TXNACC>
+              <fcub:TXNCCY>KHR</fcub:TXNCCY>
+              <fcub:TXNAMT>1000.0</fcub:TXNAMT>
+              <fcub:OFFSETBRN>000</fcub:OFFSETBRN>
+              <fcub:OFFSETACC>114119112</fcub:OFFSETACC>
+              <fcub:OFFSETCCY>KHR</fcub:OFFSETCCY>
+              <fcub:OFFSETAMT>1000.0</fcub:OFFSETAMT>
+              <fcub:XRATE>1</fcub:XRATE>
+              <fcub:NARRATIVE>Merchant QR payment</fcub:NARRATIVE>
+            </fcub:Transaction-Details-IO>
+          </fcub:FCUBS_BODY>
+        </fcub:CREATETRANSACTION_IOPK_REQ>
+      </soapenv:Body>
+    </soapenv:Envelope>
+
+parameters: []
+headers:
+  - name: Authorization
+    value: b0c369e9-5bcf-4187-9ad5-02927639f7f6
+  - name: Content-Type
+    value: text/xml
+authentication: {}
+metaSortKey: -1633078575171
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

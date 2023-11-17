@@ -1,0 +1,53 @@
+_id: req_c11f6e0fc51245f8ac3054c8efc2728f
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570144
+created: 1700216570144
+url: http://10.215.117.196:8080/payment-service/payments/api/1.0/transaction-limit
+name: getTransactionLimit
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"cif":"154565646",
+    	"channel": "CUSTOMER_MOBILE",
+    	"channel_type":"CUSTOMER_MOBILE",
+      "amount": 1,
+      "currency": "USD",
+      "branch_code": "000",
+      "purpose": "purpose",
+      "remarks": "remark",
+      "service_name": "own_transfer_usd_customer_mobile",
+     	"payer_user": {
+         "user_id": "154565646",
+          "account_number": "168000034481"
+      },
+      "payee_user": {
+    		 "user_id": "154646200",
+          "account_number": "168000100687"
+         
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: cif
+    value: "001000017"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+authentication: {}
+metaSortKey: -1632801608659.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

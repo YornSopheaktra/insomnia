@@ -1,0 +1,108 @@
+_id: req_4dfc5918811e4af4ac96f9e05886009e
+type: Request
+parentId: fld_e90231a9e6e745518fa2dfc98fd56cc9
+modified: 1700216570114
+created: 1700216570114
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceTransferNCS
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+                  "service_module": "TRANSFER",
+                  "service_group": {
+                      "code": "NCS",
+                      "name": "NCS Transfer",
+                      "description": "NCS Transfer"
+                  },
+                  "services": [
+                      {
+                          "service_id": "transfer_ncs",
+                          "txn_currency": [
+                              "USD",
+                              "KHR"
+                          ],
+                          "name": "NCS Transfer",
+                          "name_kh": "NCS Transfer",
+                          "description": null,
+                          "logo": "https://api.hatthabank.com:2443/hattha-service/api/1.0/file/NCS_LOGO/type/LOGO",
+                          "service_bean": "defaultPaymentService",
+                          "is_create_transaction": true,
+                          "is_has_fee": false,
+                          "product_code": "BK05",
+                          "transaction_code": "BTB",
+                          "is_enabled_pre_order": false,
+                          "is_repeatable": false,
+                          "service_command": [
+                              "PAYMENT"
+                          ],
+                          "service_spi": null,
+                          "txn_limitation": [
+                              {
+                                  "txn_currency": "USD",
+                                  "max": 500000.0,
+                                  "min": 0.01
+                              },
+                              {
+                                  "txn_currency": "KHR",
+                                  "max": 2000000000,
+                                  "min": 100.0
+                              }
+                          ],
+                          "daily_limitation": [
+                              {
+                                  "txn_currency": "KHR",
+                                  "limit": 20000000000
+                              },
+                              {
+                                  "txn_currency": "USD",
+                                  "limit": 500000.0
+                              }
+                          ],
+                          "service_tier": null,
+                          "service_notification": [],
+                          "service_additional_configs": [
+                              {
+                                  "OFFSETBRN": "000",
+                                  "OFFSETACC": "114119112",
+                                  "txn_currency": "USD",
+                                  "CHGCOMP": "TXN_FEE",
+                                  "OFFSETCCY": "USD",
+                                  "NARRATIVE": "NCS Transfer"
+                              },
+                              {
+                                  "OFFSETBRN": "000",
+                                  "OFFSETACC": "114119112",
+                                  "txn_currency": "KHR",
+                                  "CHGCOMP": "TXN_FEE",
+                                  "OFFSETCCY": "KHR",
+                                  "NARRATIVE": "NCS Transfer"
+                              }
+                          ],
+                          "status": "ACTIVE"
+                      }
+                  ],
+                  "channel": "CUSTOMER_MOBILE",
+                  "channel_type": "CUSTOMER_MOBILE"
+              }
+parameters: []
+headers:
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1700117601546
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

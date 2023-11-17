@@ -1,0 +1,114 @@
+_id: req_41166309a9324673b657a192de694a50
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570167
+created: 1700216570167
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServicePipay
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "service_module": "TRANSFER",
+        "service_group": {
+            "code": "PIPAY",
+            "name": "PIPAY",
+            "description": "PIPAY"
+        },
+        "services": [
+            {
+                "service_id": "transfer_pipay",
+                "txn_currency": [
+                    "USD",
+                    "KHR"
+                ],
+                "name": "Transfer Pipay",
+                "name_kh": "Transfer Pipay",
+                "description": "Transfer Pipay",
+                "service_bean": "defaultPaymentService",
+                "is_create_transaction": true,
+                "is_has_fee": false,
+                "product_code": "MBTF",
+                "transaction_code": "PIPAYOUT",
+                "is_enabled_pre_order": false,
+                "is_repeatable": true,
+                "service_command": [
+                    "PAYMENT"
+                ],
+                "service_spi": {
+                    "spi_code": "outbound_mock",
+                    "action_code": "TransferPipayService",
+                    "step": [
+                        "POST_EXECUTE"
+                    ]
+                },
+                "txn_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "min": 0.01,
+                        "max": 2500
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "min": 100,
+                        "max": 10000000
+                    }
+                ],
+                "daily_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "limit": 2500
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "limit": 10000000
+                    }
+                ],
+                "service_tier": [],
+                "service_additional_configs": [
+                    {
+                        "txn_currency": "USD",
+                        "OFFSETACC": "154460608020",
+                        "OFFSETCCY": "USD",
+                        "OFFSETBRN": "000",
+                        "NARRATIVE": "Transfer to pipay",
+                        "CHGCOMP": "TXN_FEE"
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "OFFSETACC": "154460608017",
+                        "OFFSETCCY": "KHR",
+                        "OFFSETBRN": "000",
+                        "NARRATIVE": "Transfer to pipay",
+                        "CHGCOMP": "TXN_FEE"
+                    }
+                ],
+                "status": null
+            }
+        ],
+        "channel": "CUSTOMER_MOBILE",
+        "channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1643000498364.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

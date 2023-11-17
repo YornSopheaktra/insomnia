@@ -1,0 +1,27 @@
+_id: req_9e1fb02555a24b5b9a1d3cd2188a318b
+type: Request
+parentId: fld_5fe1f94a667242d08d775c7387f20e89
+modified: 1700216551381
+created: 1700216551381
+url: "{{ _.baseUrl }}/service-configuration/api/v1/bakong/bank-list"
+name: GetBankListByTypeAndCode
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+authentication: {}
+metaSortKey: -1700156238730.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

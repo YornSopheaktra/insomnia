@@ -1,0 +1,47 @@
+_id: req_d3d337f07871458f929c341c1fb7fea0
+type: Request
+parentId: fld_0d9739a15ea24f6f8792c43c094d0475
+modified: 1700216551362
+created: 1700216551362
+url: "{{ _.baseUrl }}/service-configuration/admin-rest/mobile_service_configs/14"
+name: AddTxnConfig
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"status": "ACTIVE",
+    	"service_module": "TRANSFER",
+    	"service_id": "t_htb_qr_merchant",
+    	"configs": {
+    		"header_title": "Hattha Pay",
+    		"header_title_kh": "Hattha Pay",
+    		"shareable": "true",
+    		"repeatable": "true",
+    		"downloadable": "true",
+    		"favorable": "false",
+    		"h_favorable":"false",
+    		"h_repeatable": "true",
+    		"filters": "{\"ios\":{\"version\":\"3.3.4\",\"operator\":\">=\"},\"android\":{\"version\":\"3.3.4\",\"operator\":\">=\"},\"whitelist_cif\":\"\"}"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+authentication: {}
+metaSortKey: -1696316163370
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

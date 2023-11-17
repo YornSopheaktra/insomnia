@@ -1,0 +1,100 @@
+_id: req_7e235230a0784e50b606413a85a3daba
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570218
+created: 1700216570218
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceBillpaySolidWast
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >
+    {
+        "service_module": "PAYMENT",
+        "service_group": {
+            "code": "SOLIDWASTE",
+            "name": "Solid Waste",
+            "description": ""
+        },
+        "services": [
+            {
+                "service_id": "p_solidwaste",
+                "txn_currency": [
+                    "USD",
+                    "KHR"
+                ],
+                "name": "Solid Waste Payment",
+                "name_kh": "Solid Waste Payment",
+                "description": "",
+                "service_bean": "defaultPaymentService",
+                "is_create_transaction": false,
+                "is_has_fee": false,
+                "product_code": "MBBP",
+                "transaction_code": "PAYMENT",
+                "logo": "https://api.hatthabank.com:2443/hattha-service/api/1.0/file/BILL_1003/type/LOGO",
+                "is_enabled_pre_order": false,
+                "is_repeatable": false,
+                "service_command": [
+                    "PAYMENT"
+                ],
+                "service_spi": {
+                    "spi_code": "outbound",
+                    "action_code": "billpayPaymentService",
+                    "step": [
+                        "POST_EXECUTE"
+                    ]
+                },
+                "txn_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "min": 0.01,
+                        "max": 100000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "min": 100,
+                        "max": 400000000
+                    }
+                ],
+                "daily_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "limit": 100000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "limit": 400000000
+                    },
+                    {
+                        "txn_currency": "THB",
+                        "limit": 3200000
+                    }
+                ],
+                "service_notification":[]
+            }
+        ],
+        "channel": "CUSTOMER_MOBILE",
+        "channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1642683177314
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

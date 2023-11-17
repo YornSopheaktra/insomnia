@@ -1,0 +1,56 @@
+_id: req_df7d51e0a0b14a37afb38ed8c61d2f45
+type: Request
+parentId: fld_7f0bd2e05eca400bb8a1e46c8395e898
+modified: 1700216570100
+created: 1700216570100
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services/spi/configuration/bakong_spi"
+name: Regisgter SPI
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"code": "bakong_spi",
+    	"name": "Bakong Service",
+    	"type": "internal",
+    	"url": "http://bakong-service:9090/bakong-service/api/v1.0",
+    	"retryable": false,
+    	"is_async": false,
+    	"connect_timeout": 5000,
+    	"read_timeout": 30000,
+    	"write_timeout": 30000,
+    	"steps": [
+    		{
+    			"step": "PRE_CREATE",
+    			"endpoint": "/partners/payment/create"
+    		},
+    		{
+    			"step": "POST_EXECUTE",
+    			"endpoint": "/partners/payment"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: client_id
+    value: "12345"
+  - name: client_secret
+    value: 12345_secret
+  - name: x-api-key
+    value: 12345_api_key
+  - name: channel
+    value: CUSTOMER_MOBILE
+  - name: channel_type
+    value: CUSTOMER_MOBILE
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1700116214198
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

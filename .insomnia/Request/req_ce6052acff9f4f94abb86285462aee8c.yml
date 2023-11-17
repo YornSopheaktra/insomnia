@@ -1,0 +1,43 @@
+_id: req_ce6052acff9f4f94abb86285462aee8c
+type: Request
+parentId: fld_b9b9886f134b4081a1d549a225418b81
+modified: 1700216551347
+created: 1700216551347
+url: "{{ _.baseUrl
+  }}/service-configuration/api/v1.0/mini-statement/field-mapper/update"
+name: Update
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"filter": null,
+    	"trn_code": null,
+    	"code": "1683778764037",
+    	"txn_type": "CREDIT",
+    	"logo_url": "https://api-dev.hatthabank.com:5443/hattha-service/api/1.0/file/CREDIT_LOGO/type/LOGO",
+    	"service_id": "unknow",
+    	"title": "$.narrative"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1683743559199.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,134 @@
+_id: req_a8df485379f0476f83bfe35a2dfc1cdc
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570183
+created: 1700216570183
+url: http://10.215.117.196:8080/payment-service/api/1.0/services
+name: CreateServicewithinTransferIBBulkPayment
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"service_module": "TRANSFER",
+    	"service_group": {
+    		"code": "WITHIN",
+    		"name": "Within Transfer",
+    		"description": "Within Transfer"
+    	},
+    	"services": [
+    		{
+    			"service_id": "bulk_within_transfer",
+    			"txn_currency": [
+    				"USD",
+    				"KHR",
+    				"THB"
+    			],
+    			"name": "Bulk Within Tranfer",
+    			"name_kh": "Bulk Within Tranfer",
+    			"description": "",
+    			"service_bean": "defaultPaymentService",
+    			"is_create_transaction": true,
+    			"is_has_fee": false,
+    			"product_code": "MBTF",
+    			"transaction_code": "WITHIN",
+    			"is_enabled_pre_order": false,
+    			"is_repeatable": true,
+    			"service_command": [
+    				"PAYMENT"
+    			],
+    			"txn_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"min": 0.01,
+    					"max": 500000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"min": 100,
+    					"max": 4000000000
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"min": 1,
+    					"max": 16000000
+    				}
+    			],
+    			"daily_limitation": [
+    				{
+    					"txn_currency": "USD",
+    					"limit": 500000
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"limit": 4000000000
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"limit": 16000000
+    				}
+    			],
+    			"service_tier": [],
+    			"service_notification": [
+    				{
+    					"txn_currency": "USD",
+    					"service_bean": "",
+    					"notification_template": "Within transfer is successful, And ${ccy} ${amount} is credited to your account ${accountNumber} on ${date} at ${time}"
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"service_bean": "",
+    					"notification_template": "Within transfer is successful, And ${ccy} ${amount} is credited to your account ${accountNumber} on ${date} at ${time}"
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"service_bean": "",
+    					"notification_template": "Within transfer is successful, And ${ccy} ${amount} is credited to your account ${accountNumber} on ${date} at ${time}"
+    				}
+    			],
+    			"service_additional_configs": [
+    				{
+    					"txn_currency": "USD",
+    					"NARRATIVE": "Bulk payment within transfer"
+    				},
+    				{
+    					"txn_currency": "KHR",
+    					"NARRATIVE": "Bulk payment within transfer"
+    				},
+    				{
+    					"txn_currency": "THB",
+    					"NARRATIVE": "Bulk payment within transfer"
+    				}
+    			]
+    		}
+    	],
+    	"channel": "IB",
+    	"channel_type": "IB"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+    id: pair_b36f7ae94798482ebfd1f6ffecb4e593
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+    id: pair_c9a0c5ca42c046ceb2b11d91e2bbc4e0
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+    id: pair_dc59f6272f6a46c99fd63e2e8e12a17d
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+    id: pair_d97b75896baa424d9a7230043baba8ea
+  - name: Content-Type
+    value: application/json
+    id: pair_cbc703d837304da5986545ec897bdc48
+authentication: {}
+metaSortKey: -1643164330010.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

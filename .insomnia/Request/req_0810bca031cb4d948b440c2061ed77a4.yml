@@ -1,0 +1,36 @@
+_id: req_0810bca031cb4d948b440c2061ed77a4
+type: Request
+parentId: fld_22b2bf2af2be418485e455a0c8f18097
+modified: 1700216551122
+created: 1700216551122
+url: "{{ _.baseUrl }}/service-configuration/api/v2.0/service-config/service/save"
+name: TopUp
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+        "service_id": "topup_pinless",
+        "txn_type": "DEBIT",
+        "logo_url": "https://api-uat.hatthabank.com:6443/service-configuration/api/v1.0/telco_operators/logo/$.order_details.product.ref3$"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+authentication: {}
+metaSortKey: -1677350323092.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

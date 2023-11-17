@@ -1,0 +1,44 @@
+_id: req_4ffb5bac7d774fc5b95db376b52b9cd5
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570150
+created: 1700216570150
+url: http://10.215.117.196:8080/payment-service/payments/api/1.0/daily-limit
+name: GetLimitation
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "cif": "001000017",
+        "account_number": "001000017011",
+        "service_id": "transfer_fast",
+        "channel": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_4cc64a11f1ae45babbd3b3bf1f36da19
+  - id: pair_4362b1db114b4ab0bfd5e2a52c2a89df
+    name: x-api-key
+    value: "{{ _.web_api_key }}"
+    description: ""
+  - id: pair_52ad81523e0e4c878209417e60c7fdfb
+    name: client_id
+    value: "{{ _.web_client_id }}"
+    description: ""
+  - id: pair_53d8338735914763a1113d571b6a1b43
+    name: client_secret
+    value: "{{ _.web_client_secret }}"
+    description: ""
+authentication: {}
+metaSortKey: -1643639924596
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

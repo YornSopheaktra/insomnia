@@ -1,0 +1,113 @@
+_id: req_3dcf9a67f5be41ed8a40ec793d1dd334
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570173
+created: 1700216570173
+url: "{{ _.baseUrl }}/payment-service/api/1.0/services"
+name: CreateServiceKHQROtherBankMerchant
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "service_module": "TRANSFER",
+        "service_group": {
+            "code": "OTHER_BANK_MERCHANT",
+            "name": "Other bank merchant payment",
+            "description": "Other bank merchant payment"
+        },
+        "services": [
+            {
+                "service_id": "t_bakong_qr_merchant",
+                "txn_currency": [
+                    "USD",
+                    "KHR"
+                ],
+                "name": "Merchant Other Bank Payment",
+                "name_kh": "Merchant Other Bank Payment",
+                "description": "Merchant Other Bank Payment",
+                "service_bean": "defaultPaymentService",
+                "is_create_transaction": true,
+                "is_has_fee": false,
+                "product_code": "MT02",
+                "transaction_code": "MBQ",
+                "is_enabled_pre_order": false,
+                "is_repeatable": false,
+                "service_command": [
+                    "PAYMENT"
+                ],
+                "service_spi": {
+                    "spi_code": "outbound",
+                    "action_code": "merchantPaymentBakongService",
+                    "step": [
+                        "POST_EXECUTE"
+                    ]
+                },
+                "txn_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "min": 0.01,
+                        "max": 50000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "min": 100,
+                        "max": 200000000
+                    }
+                ],
+                "daily_limitation": [
+                    {
+                        "txn_currency": "USD",
+                        "limit": 50000
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "limit": 200000000
+                    }
+                ],
+                "service_tier": [],
+                "service_notification":[],
+                "service_additional_configs": [
+                    {
+                        "txn_currency": "USD",
+                        "OFFSETACC": "114119112",
+                        "OFFSETCCY": "USD",
+                        "OFFSETBRN": "000",
+                        "NARRATIVE": "Merchant payment with other bank"
+                    },
+                    {
+                        "txn_currency": "KHR",
+                        "OFFSETACC": "114119112",
+                        "OFFSETCCY": "KHR",
+                        "OFFSETBRN": "000",
+                        "NARRATIVE": "Merchant payment with other bank"
+                    }
+                ],
+                "status": null
+            }
+        ],
+        "channel": "CUSTOMER_MOBILE",
+        "channel_type": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: addinfo3
+    value: dfsafsdf
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1642829776438
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

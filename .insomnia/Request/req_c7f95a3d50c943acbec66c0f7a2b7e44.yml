@@ -1,0 +1,272 @@
+_id: req_c7f95a3d50c943acbec66c0f7a2b7e44
+type: Request
+parentId: fld_b9b9886f134b4081a1d549a225418b81
+modified: 1700216551341
+created: 1700216551341
+url: "{{ _.baseUrl
+  }}/service-configuration/api/v1.0/mini-statement/field-mapper/register"
+name: Register
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >
+    {
+    	"mapper_config": [
+    		{
+    			"service_id":"unknow",
+    			"title":"$.narrative",
+    			"txn_type":"CREDIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/CREDIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"unknow",
+    			"title":"$.narrative",
+    			"txn_type":"DEBIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/DEBIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"transfer_within,transfer_own_account",
+    			"title":"$.payer.name",
+    			"txn_type":"CREDIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/CREDIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"transfer_within,transfer_own_account",
+    			"title":"$.payee.name",
+    			"txn_type":"DEBIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/DEBIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"transfer_bakong_casa",
+    			"title":"$.additional_ref.receiver_name",
+    			"txn_type":"DEBIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/BAKONG_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"transfer_pipay",
+    			"title":"$.additional_ref.receiver_name",
+    			"txn_type":"DEBIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/PIPAY_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"transfer_bakong_wallet_od,transfer_bakong_wallet",
+    			"title":"$.additional_ref.receiver_name",
+    			"txn_type":"DEBIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/BAKONG_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"p_edc,p_edc_online,p_ppwsa,p_solidwaste,p_mlvt,p_general_bill_offline",
+    			"title":"$.product.ref2",
+    			"txn_type":"DEBIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/BILL_$.product.ref3$/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"topup_pinless,topup_pincode",
+    			"title":"$.product.ref1",
+    			"txn_type":"DEBIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/service-configuration/api/v1.0/telco_operators/logo/$.product.ref3$",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"BWD",
+    			"title":"$.narrative",
+    			"txn_type":"CREDIT",
+    			"trn_code":"BWD",
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/BAKONG_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"t_bakong_qr_merchant",
+    			"title":"Transferred to $.additional_ref.receiver_name",
+    			"txn_type":"DEBIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/DEBIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"t_htb_qr_merchant",
+    			"title":"Paid by $.payer.name",
+    			"txn_type":"CREDIT",
+    			"trn_code":null,
+    			"filter":"{\"$.product.name$\": \"\"}",
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/CREDIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"t_htb_qr_merchant",
+    			"title":"Paid to $.additional_ref.receiver_name$",
+    			"txn_type":"DEBIT",
+    			"trn_code":null,
+    			"filter":"{\"$.product.name$\": \"\"}",
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/DEBIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"t_bakong_qr_wallet_on",
+    			"title":"Paid to $.additional_ref.receiver_name",
+    			"txn_type":"DEBIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/DEBIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"merchant-deposit,merchant-deposit_od,merchant-deposit_on_domain",
+    			"title":"Paid by $.additional_ref.sender_name",
+    			"txn_type":"CREDIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/CREDIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"customer_khqr-deposit,customer_khqr-deposit_on,customer_khqr-deposit_off",
+    			"title":"Received from $.additional_ref.sender_name",
+    			"txn_type":"CREDIT",
+    			"trn_code":null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/CREDIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"unknown",
+    			"title":"$.narrative",
+    			"txn_type":"DEBIT",
+    			"trn_code": "QRT,QRC",
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/CROSS_BORDER/type/TRANSFER",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"p_loan_repayment",
+    			"title":"Loan Repayment",
+    			"txn_type":"CREDIT",
+    			"trn_code": null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/LOAN_REPAYMENT/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"p_loan_repayment",
+    			"title":"Loan Repayment",
+    			"txn_type":"DEBIT",
+    			"trn_code": null,
+    			"filter":null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/LOAN_REPAYMENT/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"t_htb_qr_merchant",
+    			"title":"Tip to $.additional_ref.receiver_name$",
+    			"txn_type":"DEBIT",
+    			"trn_code": null,
+    			"filter":"{\"$.product.name$\": \"SCAN_PAY_TIP\"}",
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/LOGO_TIP/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"t_htb_qr_merchant",
+    			"title":"Tip by $.additional_ref.receiver_name$",
+    			"txn_type":"CREDIT",
+    			"trn_code": null,
+    			"filter":"{\"$.product.name$\": \"SCAN_PAY_TIP\"}",
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/LOGO_TIP/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"t_htb_qr_customer",
+    			"title":"Transferred to $.additional_ref.receiver_name",
+    			"txn_type":"DEBIT",
+    			"trn_code": null,
+    			"filter": "{\"$.product.name$\": \"\"}",
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/LOGO_TIP/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"t_htb_qr_customer",
+    			"title":"Tip to $.additional_ref.receiver_name$",
+    			"txn_type":"DEBIT",
+    			"trn_code": null,
+    			"filter":"{\"$.product.name$\": \"SCAN_PAY_TIP\"}",
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/LOGO_TIP/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"t_htb_qr_customer",
+    			"title":"Tip by $.payer.name",
+    			"txn_type":"CREDIT",
+    			"trn_code": null,
+    			"filter":"{\"$.product.name$\": \"SCAN_PAY_TIP\"}",
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/LOGO_TIP/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"t_htb_qr_customer",
+    			"title":"Received from $.payer.name",
+    			"txn_type":"CREDIT",
+    			"trn_code": null,
+    			"filter": "{\"$.product.name$\": \"\"}",
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/CREDIT_LOGO/type/LOGO",
+    			"created_by":"TraZzz"
+    		},
+    		{
+    			"service_id":"p_hattha_pay",
+    			"title":"$.product.name",
+    			"txn_type":"DEBIT",
+    			"trn_code": null,
+    			"filter": null,
+    			"logo_url":"${api-gateway.public.base.url}/hattha-service/api/1.0/file/$.product.ref1$/type/COMPANY_LOGO",
+    			"created_by":"TraZzz"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1683777929779
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

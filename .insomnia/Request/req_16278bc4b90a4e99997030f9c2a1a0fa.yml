@@ -1,0 +1,40 @@
+_id: req_16278bc4b90a4e99997030f9c2a1a0fa
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570124
+created: 1700216570124
+url: "{{ _.baseUrl }}/hattha-service/payments/api/1.0/orders/execute/{% response
+  'body', 'req_977024adaf0f4fde81073d9f516a12d2',
+  'b64::JC5kYXRhLm9yZGVyX2lk::46b', 'never', 60 %}"
+name: ExecuteOrder
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"cif": "114119112"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: channel
+    value: CUSTOMER_MOBILE
+  - name: addInfo3
+    value: "21312313"
+authentication: {}
+metaSortKey: -1632690793790.125
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

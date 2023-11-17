@@ -1,0 +1,27 @@
+_id: req_694ff2d416ec44aeb5d8425cfeca4778
+type: Request
+parentId: fld_6c338348418a4fda821b58ff2945610e
+modified: 1700216551189
+created: 1700216551189
+url: "{{ _.baseUrl }}/service-configuration/api/v1.0/telco_operators/names/cellcard"
+name: GetOperatorByName
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+authentication: {}
+metaSortKey: -1647718874637.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

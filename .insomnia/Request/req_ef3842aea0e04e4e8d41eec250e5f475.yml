@@ -1,0 +1,55 @@
+_id: req_ef3842aea0e04e4e8d41eec250e5f475
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570127
+created: 1700216570127
+url: "{{ _.baseUrl }}/hattha-service/payments/api/1.0/orders/create"
+name: CreateOrderMerchantPayment
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"service_id": "transfer_within",
+    	"amount": "1",
+    	"branch_code": "000",
+    	"currency": "USD",
+    	"purpose": "purpose",
+    	"remarks": "remark",
+    	"payer_user": {
+    		"account": "168000101292"
+    	},
+    	"payee_user": {
+    		"account": "168000100687"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_5ac60d4bf35b47389703186ab0a2c857
+  - name: cif
+    value: "001000017"
+    id: pair_aa4a2afd0e4c44eaa219bef7e104f6cc
+  - name: x-api-key
+    value: "{{ _.web_api_key }}"
+    id: pair_e879939a3d684ce195132ce0d6860de5
+  - name: client_id
+    value: "{{ _.web_client_id }}"
+    id: pair_1c337ec705004d50bbe6cdc9d1a50dad
+  - name: client_secret
+    value: "{{ _.web_client_secret }}"
+    id: pair_8bae0be074d64892810e7f845dfd4cab
+  - name: channel
+    value: CUSTOMER_MOBILE
+    id: pair_dda5efe330a74d1b80b42bc61fd41039
+authentication: {}
+metaSortKey: -1632616822994.625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

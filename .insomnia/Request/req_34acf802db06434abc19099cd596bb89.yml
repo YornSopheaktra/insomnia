@@ -1,0 +1,52 @@
+_id: req_34acf802db06434abc19099cd596bb89
+type: Request
+parentId: fld_b485490b1787492493a737137546cb2c
+modified: 1700216570241
+created: 1700216570241
+url: http://localhost:9090/payment-service/payments/api/1.0/orders/create
+name: CreateLocal
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "req_ref_id": "within-12345",
+      "amount": 400000100,
+      "currency": "KHR",
+      "purpose": "purpose",
+      "remarks": "remark",
+      "service_id": "transfer_within",
+      "payer_user": {
+        "user_id": "154644929",
+        "account_number": "168999999994"
+      },
+      "payee_user": {
+        "account_number": "168000079421"
+      },
+      "cif": "154644929",
+      "channel": "CUSTOMER_MOBILE"
+    }
+parameters: []
+headers:
+  - name: client_id
+    value: "12345"
+  - name: client_secret
+    value: 12345_secret
+  - name: x-api-key
+    value: 12345_api_key
+  - name: channel
+    value: CUSTOMER_MOBILE
+  - name: channel_type
+    value: CUSTOMER_MOBILE
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1673494631311
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

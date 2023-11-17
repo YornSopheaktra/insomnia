@@ -1,0 +1,36 @@
+_id: req_3a80567ed4914a7ab51d4c2e23c94768
+type: Request
+parentId: fld_4708ec755e4243559ea1f32bd25d6fbd
+modified: 1700216551304
+created: 1700216551304
+url: "{{ _.baseUrl }}/service-configuration/mobile_service_configs/2"
+name: servceConfigBakongWallet
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"configs": {
+    		"repeatable": "true"
+    	}
+    }
+parameters: []
+headers:
+  - name: client_secret
+    value: "{{ _.internal_client_secret }}"
+  - name: client_id
+    value: "{{ _.internal_client_id }}"
+  - name: x-api-key
+    value: "{{ _.internal_api_key }}"
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1649197636681.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
